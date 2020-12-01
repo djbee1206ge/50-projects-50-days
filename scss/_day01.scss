@@ -1,0 +1,56 @@
+.panel-wrapper {
+	display: flex;
+	flex: 0.5;
+	gap: 1rem;
+}
+.panel {
+	position: relative;
+	height: 80vh;
+	flex: 0.5;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: var(--br-2);
+	color: var(--clr-neutral-100);
+	cursor: pointer;
+	transition: flex 700ms ease-in;
+	&.active {
+		flex: 5;
+		h3 {
+			opacity: 1;
+		}
+	}
+}
+.img-title {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+	text-shadow: 0 0 0.05rem var(--clr-neutral-400);
+	opacity: 0;
+	transition: opacity 300ms ease-in 400ms;
+}
+@media (max-width: 30rem) {
+	.panel:nth-of-type(4),
+	.panel:nth-of-type(5),
+	.panel:nth-of-type(6) {
+		display: none;
+	}
+}
+.bg-img1 {
+	background-image: url(../assets/filippo-cesarini-6TaW2xmXKUs-unsplash.jpg);
+}
+.bg-img2 {
+	background-image: url(../assets/matteo-cancellieri-vo6IB0e6hZU-unsplash.jpg);
+}
+.bg-img3 {
+	background-image: url(../assets/robin-mathlener-gjzTyFGTe2w-unsplash.jpg);
+}
+.bg-img4 {
+	background-image: url(../assets/saira-OTz395r9anM-unsplash.jpg);
+}
+.bg-img5 {
+	background-image: url(../assets/mike-c-s-6jjm2w6O5rE-unsplash.jpg);
+}
+.bg-img6 {
+	background-image: url(../assets/pieter-benjamin-nijs-xkcD-7u6NAc-unsplash.jpg);
+}
