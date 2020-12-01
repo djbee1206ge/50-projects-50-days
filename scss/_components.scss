@@ -1,0 +1,69 @@
+.daily-header {
+	text-align: center;
+	color: var(--clr-primary-400);
+	height: 10vh;
+
+	& * {
+		margin: 1rem 0;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+.daily-list {
+	max-width: 70rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2rem;
+	border-radius: var(--br-2);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	box-shadow: 0 0 0.1rem var(--clr-neutral-300);
+	a {
+		color: inherit;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 300ms ease-in-out;
+		&:focus,
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+/*#region Expanding cards */
+.panel {
+	position: relative;
+	height: 80vh;
+	flex: 0.5;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-radius: var(--br-2);
+	color: var(--clr-neutral-100);
+	cursor: pointer;
+	transition: flex 700ms ease-in;
+	&.active {
+		flex: 5;
+		h3 {
+			opacity: 1;
+		}
+	}
+}
+.img-title {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+	text-shadow: 0 0 0.05rem var(--clr-neutral-400);
+	opacity: 0;
+	transition: opacity 300ms ease-in 400ms;
+}
+@media (max-width: 30rem) {
+	.panel:nth-of-type(4),
+	.panel:nth-of-type(5),
+	.panel:nth-of-type(6) {
+		display: none;
+	}
+}
+/*#endregion Expanding cards */
