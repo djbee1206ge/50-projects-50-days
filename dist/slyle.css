@@ -52,7 +52,6 @@ img {
   --clr-neutral-100: #fff;
   --clr-neutral-300: #909090;
   --clr-neutral-400: #030303;
-  --clr-primary-300: #3498db;
   --clr-primary-400: #ff3369;
   /* ## Typography */
   --ff-base: 'Mulish', sans-serif;
@@ -85,7 +84,7 @@ body {
   color: var(--clr-neutral-400);
   line-height: 1.6;
   background-color: var(--clr-neutral-100);
-  padding: 0;
+  padding: 0 1vw;
 }
 
 *,
@@ -136,17 +135,6 @@ img {
   border-radius: var(--br);
 }
 
-/*#region daily items */
-.wrapper {
-  background-color: #fff;
-  max-width: 90vw;
-  height: 100%;
-  padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .daily-header {
   text-align: center;
   color: var(--clr-primary-400);
@@ -169,7 +157,6 @@ img {
   padding: 2rem;
   border-radius: var(--br-2);
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   gap: 1rem;
   box-shadow: 0 0 0.1rem var(--clr-neutral-300);
@@ -186,13 +173,7 @@ img {
   opacity: 0.5;
 }
 
-/*#endregion daily items */
-.panel-wrapper {
-  display: flex;
-  flex: 0.5;
-  gap: 1rem;
-}
-
+/*#region Expanding cards */
 .panel {
   position: relative;
   height: 80vh;
@@ -231,6 +212,18 @@ img {
   }
 }
 
+/*#endregion Expanding cards */
+.gallery-wrapper {
+  display: flex;
+  background-color: #fff;
+  gap: 1rem;
+  max-width: 90vw;
+  height: 100%;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bg-img1 {
   background-image: url(../assets/filippo-cesarini-6TaW2xmXKUs-unsplash.jpg);
 }
@@ -253,78 +246,5 @@ img {
 
 .bg-img6 {
   background-image: url(../assets/pieter-benjamin-nijs-xkcD-7u6NAc-unsplash.jpg);
-}
-
-.progress-wrapper {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 2rem;
-  width: 20rem;
-  max-width: 100%;
-  background-color: transparent;
-}
-
-.progress-wrapper::before {
-  content: '';
-  background-color: var(--clr-neutral-300);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 0.25rem;
-  width: 100%;
-}
-
-.progress-wrapper .progress {
-  background-color: var(--clr-primary-300);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 0.25rem;
-  width: 0;
-  transition: 500ms ease;
-}
-
-.progress-wrapper .circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.2rem solid var(--clr-neutral-300);
-  color: --clr-neutral-300;
-  border-radius: var(--br-2);
-  height: 2rem;
-  width: 2rem;
-  z-index: 99;
-  background-color: var(--clr-neutral-100);
-  transition: 400ms ease;
-}
-
-.progress-wrapper .circle.active {
-  border-color: var(--clr-primary-300);
-}
-
-.btn {
-  background-color: var(--clr-primary-300);
-  color: var(--clr-neutral-100);
-  border: none;
-  border-radius: 0.25rem;
-  font-family: inherit;
-  padding: 0.5rem 2rem;
-  cursor: pointer;
-}
-
-.btn[disabled] {
-  opacity: 0.25;
-  cursor: not-allowed;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn:focus {
-  outline: 0;
 }
 /*# sourceMappingURL=slyle.css.map */
