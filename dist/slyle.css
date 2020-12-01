@@ -49,9 +49,11 @@ img {
 
 :root {
   /* ## Colors */
-  --clr-neutral-100: #fff;
+  --clr-neutral-100: #ebebeb;
+  --clr-neutral-200: #ececec;
   --clr-neutral-300: #909090;
   --clr-neutral-400: #030303;
+  --clr-primary-300: #3498db;
   --clr-primary-400: #ff3369;
   /* ## Typography */
   --ff-base: 'Mulish', sans-serif;
@@ -76,15 +78,38 @@ img {
 
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   font-family: var(--ff-base);
   font-size: var(--fs-400);
   color: var(--clr-neutral-400);
   line-height: 1.6;
-  background-color: var(--clr-neutral-100);
   padding: 0 1vw;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 90rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 0.1rem solid var(--clr-neutral-200);
+  border-radius: var(--br-1);
+  box-shadow: 0 0.3rem 0.3rem var(--clr-neutral-200);
+}
+
+.normalize {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-600);
+  text-align: left;
+}
+
+code {
+  padding: 0.1rem 0.5rem;
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+  border-radius: 0.25rem;
 }
 
 *,
@@ -151,7 +176,7 @@ img {
 }
 
 .daily-list {
-  max-width: 70rem;
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
@@ -173,7 +198,15 @@ img {
   opacity: 0.5;
 }
 
-/*#region Expanding cards */
+.panel-wrapper {
+  display: flex;
+  background-color: #fff;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
 .panel {
   position: relative;
   height: 80vh;
@@ -212,18 +245,6 @@ img {
   }
 }
 
-/*#endregion Expanding cards */
-.gallery-wrapper {
-  display: flex;
-  background-color: #fff;
-  gap: 1rem;
-  max-width: 90vw;
-  height: 100%;
-  padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .bg-img1 {
   background-image: url(../assets/filippo-cesarini-6TaW2xmXKUs-unsplash.jpg);
 }
@@ -246,5 +267,75 @@ img {
 
 .bg-img6 {
   background-image: url(../assets/pieter-benjamin-nijs-xkcD-7u6NAc-unsplash.jpg);
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  width: 20rem;
+  color: var(--clr-neutral-300);
+}
+
+.progress-wrapper .progress {
+  background-color: var(--clr-primary-300);
+  height: 0.25rem;
+  width: 0;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.progress-wrapper:before {
+  content: '';
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--clr-neutral-300);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.progress-wrapper .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: var(--br-3);
+  border: 0.25rem solid var(--clr-neutral-300);
+  z-index: 9;
+  background-color: var(--clr-neutral-100);
+}
+
+.progress-wrapper .circle.active {
+  border-color: var(--clr-primary-300);
+}
+
+.btn {
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+  padding: 0.5rem 3rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(0.98);
+}
+
+.btn[disabled] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=slyle.css.map */

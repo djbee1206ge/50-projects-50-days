@@ -1,0 +1,63 @@
+.progress-wrapper {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 2rem;
+	max-width: 100%;
+	width: 20rem;
+	color: var(--clr-neutral-300);
+
+	.progress {
+		background-color: var(--clr-primary-300);
+		height: 0.25rem;
+		width: 0;
+		position: absolute;
+		top: 25%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+	&:before {
+		content: '';
+		height: 0.25rem;
+		width: 100%;
+		background-color: var(--clr-neutral-300);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+	}
+
+	.circle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2rem;
+		width: 2rem;
+		border-radius: var(--br-3);
+		border: 0.25rem solid var(--clr-neutral-300);
+		z-index: 9;
+		background-color: var(--clr-neutral-100);
+		&.active {
+			border-color: var(--clr-primary-300);
+		}
+	}
+}
+.btn {
+	border: none;
+	border-radius: 0.25rem;
+	background-color: var(--clr-primary-300);
+	color: var(--clr-neutral-100);
+	padding: 0.5rem 3rem;
+	margin: 1rem;
+	cursor: pointer;
+	&:active {
+		transform: translateY(0.98);
+	}
+	&[disabled] {
+		opacity: 0.25;
+		cursor: not-allowed;
+	}
+	&:focus {
+		outline: none;
+	}
+}

@@ -2,9 +2,11 @@
 :root {
 	/* ## Colors */
 
-	--clr-neutral-100: #fff;
+	--clr-neutral-100: #ebebeb;
+	--clr-neutral-200: #ececec;
 	--clr-neutral-300: #909090;
 	--clr-neutral-400: #030303;
+	--clr-primary-300: #3498db;
 	--clr-primary-400: #ff3369;
 
 	/* ## Typography */
@@ -32,13 +34,35 @@
 
 body {
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
 	font-family: var(--ff-base);
 	font-size: var(--fs-400);
 	color: var(--clr-neutral-400);
 	line-height: 1.6;
-	background-color: var(--clr-neutral-100);
 	padding: 0 1vw;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 90rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	border: 0.1rem solid var(--clr-neutral-200);
+	border-radius: var(--br-1);
+	box-shadow: 0 0.3rem 0.3rem var(--clr-neutral-200);
+}
+
+.normalize {
+	color: var(--clr-neutral-400);
+	font-size: var(--fs-600);
+	text-align: left;
+}
+code {
+	padding: 0.1rem 0.5rem;
+	background-color: var(--clr-primary-300);
+	color: var(--clr-neutral-100);
+	border-radius: 0.25rem;
 }
