@@ -362,6 +362,7 @@ img {
 }
 
 .day03.show-nav + nav li {
+  opacity: 1;
   transform: translateX(0);
   transition-delay: 300ms;
 }
@@ -484,6 +485,7 @@ nav ul * + * {
 }
 
 nav ul li {
+  opacity: 0;
   transform: translateX(-100%);
 }
 
