@@ -1,0 +1,42 @@
+.lg-100 {
+	background-image: var(--lg-100);
+}
+
+.search {
+	position: relative;
+	height: 3rem;
+	.input {
+		background-color: var(--clr-bg-100);
+		border: 0;
+		font-size: var(--fs-500);
+		padding: 1rem;
+		height: 3rem;
+		width: 3rem;
+		transition: width 300ms ease;
+		&:focus {
+			outline: none;
+		}
+	}
+	&-btn {
+		background-color: var(--clr-bg-100);
+		border: 0;
+		cursor: pointer;
+		font-size: var(--fs-600);
+		color: var(--clr-primary-600a);
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 3rem;
+		width: 3rem;
+		transition: transform 300ms ease;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+.search.active .input {
+	width: 12.5rem;
+}
+.search.active .search-btn {
+	transform: translateX(12.375rem);
+}
