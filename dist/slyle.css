@@ -625,7 +625,6 @@ nav ul > li + li + li {
   height: clamp(11.25rem, calc(100vw - 12.5rem), 16.875rem);
   border-radius: 1rem;
   background-color: var(--clr-bg-200);
-  background-image: url(https://source.unsplash.com/random/240x140);
   background-size: cover;
   position: center center;
   transform: translateX(800%);
@@ -638,5 +637,45 @@ nav ul > li + li + li {
 
 .scroll-container .box.show {
   transform: translateX(0);
+}
+
+.box-img-1 {
+  background-image: url(../assets/xavier-von-erlach-RtlnT6RwTg0-unsplash.jpg);
+}
+
+.box-img-2 {
+  background-image: url(../assets/tim-stief-Is1CIqftnNY-unsplash.jpg);
+}
+
+.box-img-3 {
+  background-image: url(../assets/sunyu-kim-qoKsbHSqU-w-unsplash.jpg);
+}
+
+.box-img-4 {
+  background-image: url(../assets/susan-yin-7mnuaPl6Jug-unsplash.jpg);
+}
+
+.box-img-5 {
+  background-image: url(../assets/saira-OTz395r9anM-unsplash.jpg);
+}
+
+.box-img-6 {
+  background-image: url(../assets/robynne-hu-CRvaC071ZXo-unsplash.jpg);
+}
+
+.box-img-7 {
+  background-image: url(../assets/robin-mathlener-gjzTyFGTe2w-unsplash.jpg);
+}
+
+.box-img-8 {
+  background-image: url(../assets/pieter-benjamin-nijs-xkcD-7u6NAc-unsplash.jpg);
+}
+
+.box-img-9 {
+  background-image: url(../assets/filippo-cesarini-6TaW2xmXKUs-unsplash.jpg);
+}
+
+.box-img-10 {
+  background-image: url(../assets/matteo-cancellieri-vo6IB0e6hZU-unsplash.jpg);
 }
 /*# sourceMappingURL=slyle.css.map */
