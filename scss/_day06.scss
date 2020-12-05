@@ -1,0 +1,31 @@
+.scroll-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 95vw;
+	max-width: 90rem;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #fff;
+	> * + * {
+		margin-top: 1rem;
+	}
+	.box {
+		width: clamp(20rem, 100%, 30rem);
+		height: clamp(11.25rem, calc(100vw - 12.5rem), 16.875rem);
+		border-radius: 1rem;
+		background-color: var(--clr-bg-200);
+		background-image: url(https://source.unsplash.com/random/240x140);
+		background-size: cover;
+		position: center center;
+		transform: translateX(800%);
+		transition: transform 1000ms ease-in-out;
+		&:nth-of-type(even) {
+			transform: translateX(-800%);
+		}
+		&.show {
+			transform: translateX(0);
+		}
+	}
+}

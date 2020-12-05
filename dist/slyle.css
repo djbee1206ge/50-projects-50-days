@@ -60,6 +60,7 @@ img {
   --clr-primary-600a: hsl(251, 100%, 69%);
   --clr-primary-600b: hsl(251, 70%, 69%);
   --clr-bg-100: #fafafa;
+  --clr-bg-200: #efedd6;
   --clr-bg-600: #2e2e2e;
   --clr-bg-700: #333333;
   --lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
@@ -601,5 +602,41 @@ nav ul > li + li + li {
   transform: translateX(-50%);
   color: var(--clr-bg-100);
   font-size: var(--fs-900);
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 95vw;
+  max-width: 90rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+}
+
+.scroll-container > * + * {
+  margin-top: 1rem;
+}
+
+.scroll-container .box {
+  width: clamp(20rem, 100%, 30rem);
+  height: clamp(11.25rem, calc(100vw - 12.5rem), 16.875rem);
+  border-radius: 1rem;
+  background-color: var(--clr-bg-200);
+  background-image: url(https://source.unsplash.com/random/240x140);
+  background-size: cover;
+  position: center center;
+  transform: translateX(800%);
+  transition: transform 1000ms ease-in-out;
+}
+
+.scroll-container .box:nth-of-type(even) {
+  transform: translateX(-800%);
+}
+
+.scroll-container .box.show {
+  transform: translateX(0);
 }
 /*# sourceMappingURL=slyle.css.map */
