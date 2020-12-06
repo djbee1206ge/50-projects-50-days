@@ -61,6 +61,10 @@ img {
   --clr-primary-600b: hsl(251, 70%, 69%);
   --clr-bg-100: #fafafa;
   --clr-bg-200: #efedd6;
+  --clr-bg-300: rgba(88, 85, 236, 0.4);
+  --clr-bg-300-hover: rgba(88, 85, 236, 1);
+  --clr-bg-400: rgba(34, 109, 36, 0.4);
+  --clr-bg-400-hover: rgba(34, 109, 36, 1);
   --clr-bg-600: #2e2e2e;
   --clr-bg-700: #333333;
   --lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
@@ -677,5 +681,114 @@ nav ul > li + li + li {
 
 .box-img-10 {
   background-image: url(../assets/matteo-cancellieri-vo6IB0e6hZU-unsplash.jpg);
+}
+
+:root {
+  --hover-width: 4;
+  --other-width: 1;
+}
+
+.slp-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background: var(--bg-700);
+  display: flex;
+}
+
+.slp-container .split {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 1000ms ease;
+}
+
+.slp-container .split h1 {
+  font-size: 4rem;
+  color: var(--clr-neutral-100);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  white-space: nowrap;
+}
+
+.slp-container .split-left {
+  left: 0;
+  background-image: url(../assets/ps5.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slp-container .split-left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-bg-300);
+}
+
+.slp-container .split-left > .split-btn:focus,
+.slp-container .split-left > .split-btn:hover {
+  background-color: var(--clr-bg-300-hover);
+  border-color: var(--clr-bg-300-hover);
+}
+
+.slp-container .split-right {
+  left: 0;
+  background-image: url(../assets/xbox.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slp-container .split-right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-bg-400);
+}
+
+.slp-container .split-right > .split-btn:focus,
+.slp-container .split-right > .split-btn:hover {
+  background-color: var(--clr-bg-400-hover);
+  border-color: var(--clr-bg-400-hover);
+}
+
+.slp-container .split-btn {
+  position: absolute;
+  min-width: 10rem;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  border: 0.2rem solid var(--clr-neutral-100);
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-weight: var(--fw-700);
+  transition: all 500ms ease;
+}
+
+.hover-left > .split-left {
+  flex: var(--hover-width);
+}
+
+.hover-left > .split-right {
+  flex: var(--other-width);
+}
+
+.hover-right > .split-right {
+  flex: var(--hover-width);
+}
+
+.hover-right > .split-left {
+  flex: var(--other-width);
 }
 /*# sourceMappingURL=slyle.css.map */
