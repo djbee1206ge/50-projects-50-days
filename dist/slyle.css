@@ -54,6 +54,7 @@ img {
   --clr-neutral-200: #ececec;
   --clr-neutral-300: #909090;
   --clr-neutral-400: #030303;
+  --clr-neutral-500: #003c6d;
   --clr-primary-300: #3498db;
   --clr-primary-400: #ff3369;
   --clr-primary-500: #ff7979;
@@ -65,6 +66,7 @@ img {
   --clr-bg-300-hover: rgba(88, 85, 236, 1);
   --clr-bg-400: rgba(34, 109, 36, 0.4);
   --clr-bg-400-hover: rgba(34, 109, 36, 1);
+  --clr-bg-500: #4682b4;
   --clr-bg-600: #2e2e2e;
   --clr-bg-700: #333333;
   --lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
@@ -790,5 +792,110 @@ nav ul > li + li + li {
 
 .hover-right > .split-left {
   flex: var(--other-width);
+}
+
+.day08-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  max-width: 90rem;
+  background-color: var(--clr-bg-500);
+  width: clamp(18rem, 90vw, 90rem);
+  border-radius: 1rem;
+  margin: 2rem auto;
+}
+
+.form-control-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--clr-neutral-100);
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.form-control-container > * + * {
+  margin-top: 1rem;
+}
+
+.form-control-container > form > * + * {
+  margin-top: 1rem;
+}
+
+.form-control-container a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: lightblue;
+}
+
+.form-control-container a:hover, .form-control-container a:focus {
+  opacity: 0.8;
+}
+
+.form-control-container a:active {
+  color: white;
+}
+
+.form-control-container .day08-btn {
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--clr-neutral-500);
+  font-weight: 700;
+  background-color: lightblue;
+  border: 0;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.form-control-container .day08-btn:hover, .form-control-container .day08-btn:focus {
+  opacity: 0.8;
+}
+
+.form-control-container .day08-btn:active {
+  transform: scale(0.98);
+}
+
+.form-control-container .form-control {
+  position: relative;
+}
+
+.form-control-container .form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 0.125rem solid white;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: var(--fs-500);
+  color: var(--clr-neutral-100);
+}
+
+.form-control-container .form-control input:focus, .form-control-container .form-control input:valid {
+  outline: none;
+  border-color: lightblue;
+}
+
+.form-control-container .form-control input:focus + label span, .form-control-container .form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-2rem);
+}
+
+.form-control-container .form-control label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+}
+
+.form-control-container .form-control label span {
+  display: inline-block;
+  font-size: var(--fs-500);
+  min-width: 0.3125rem;
+  transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 /*# sourceMappingURL=slyle.css.map */
