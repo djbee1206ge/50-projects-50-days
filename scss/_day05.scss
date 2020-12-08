@@ -1,22 +1,15 @@
 .bil-bg {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	height: 100%;
+	width: 100%;
 	background-image: url(https://source.unsplash.com/random);
 	background-size: cover;
 	background-position: center center;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 60vh;
-	// filter: blur(30px);
 }
 .bil-loading-text {
 	position: absolute;
-	top: 70%;
-	left: 50%;
-	transform: translateX(-50%);
+	top: 50%;
+	left: 30%;
+	transform: translateY(-50%);
 	color: var(--clr-bg-100);
 	font-size: var(--fs-900);
 }

@@ -1,6 +1,6 @@
 const left = document.querySelector('.split-left');
 const right = document.querySelector('.split-right');
-const container = document.querySelector('.slp-container');
+const container = document.querySelector('.split-container');
 
 left.addEventListener('mouseenter', () => container.classList.add('hover-left'));
 left.addEventListener('mouseleave', () => container.classList.remove('hover-left'));

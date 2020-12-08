@@ -7,11 +7,14 @@
 	--clr-neutral-300: #909090;
 	--clr-neutral-400: #030303;
 	--clr-neutral-500: #003c6d;
+
+	--clr-primary-200: #add8e6;
 	--clr-primary-300: #3498db;
 	--clr-primary-400: #ff3369;
 	--clr-primary-500: #ff7979;
 	--clr-primary-600a: hsl(251, 100%, 69%);
 	--clr-primary-600b: hsl(251, 70%, 69%);
+	--clr-primary-600c: hsl(251, 10%, 69%);
 
 	--clr-bg-100: #fafafa;
 	--clr-bg-200: #efedd6;
@@ -62,38 +65,35 @@ body {
 	align-items: center;
 	gap: 2rem;
 }
-
-.wrapper {
-	max-width: 90rem;
-	margin: 0 auto;
-	margin-bottom: 2rem;
-	justify-content: center;
-	align-items: center;
-	border: 0.1rem solid var(--clr-neutral-200);
-	border-radius: var(--br-1);
-	box-shadow: var(--bs-100);
-}
-
-.container {
-	position: relative;
+.main-container {
 	display: flex;
 	flex-direction: column;
-	width: 90vw;
-	max-width: 90rem;
-	margin: 0 auto;
-	margin-bottom: 2rem;
 	justify-content: center;
 	align-items: center;
-	padding: 10rem 1rem;
-	border-radius: var(--br-1);
-	&.no-padding {
-		padding: 0;
-	}
-}
-small {
-	display: inline-block;
+	max-width: 90rem;
+	width: clamp(18rem, 90vw, 90rem);
+	border-radius: 1rem;
 	margin: 2rem auto;
 }
+.height-75vh {
+	height: 75vh;
+}
+.height-100pc {
+	height: 100pc;
+}
+.bg {
+	background-color: var(--bg);
+}
+
+footer {
+	max-width: 90rem;
+	width: clamp(18rem, 90vw, 90rem);
+	small {
+		display: inline-block;
+		margin: 2rem auto;
+	}
+}
+
 code {
 	padding: 0.1rem 0.5rem;
 	background-color: var(--clr-primary-300);
@@ -104,13 +104,36 @@ code {
 .bg-dark {
 	background-color: var(--clr-bg-700);
 }
+.bg-light {
+	background-color: var(--clr-bg-200);
+}
+.bg-blue {
+	background-color: var(--clr-bg-500);
+}
+.bg-purple {
+	background-color: var(--clr-primary-600a);
+}
 
 .border {
+	padding: 2rem;
 	border: 1px solid var(--clr-neutral-300);
 	border-radius: var(--br-1);
 	box-shadow: var(--bs-100);
 }
-
+.flex-row {
+	display: flex;
+	align-items: start;
+	gap: 2rem;
+}
+.no-mt {
+	margin-top: 0 !important;
+}
+.spacer-1 > * + * {
+	margin-top: 1rem;
+}
+.spacer-2 > * + * {
+	margin-top: 2rem;
+}
 .daily-header {
 	text-align: center;
 	color: var(--clr-primary-400);
