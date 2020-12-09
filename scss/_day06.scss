@@ -1,3 +1,9 @@
+.day06-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .box {
 	width: clamp(18rem, 100%, 27rem);
 	height: clamp(9rem, calc(100vw - 9rem), 13.5rem);

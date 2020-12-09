@@ -1,20 +1,27 @@
-.bg {
-	--bg: var(--clr-bg-500);
-}
-.form-control-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.form-container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
 	padding: 2rem;
-	background-color: rgba(0, 0, 0, 0.2);
 	color: var(--clr-neutral-100);
-	box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-	> * + * {
-		margin-top: 1rem;
+	text-align: center;
+	border-radius: 1rem;
+	h2 {
+		margin-bottom: 2rem;
 	}
-	> form > * + * {
-		margin-top: 1rem;
+	> form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		max-width: 21rem;
+		margin: 0 auto;
+		background-color: rgba(0, 0, 0, 0.2);
+
+		> * + * {
+			margin-top: 1rem;
+		}
 	}
 
 	a {

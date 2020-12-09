@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Day 10</title>
+		<link rel="stylesheet" href="../dist/style.css" />
+		<script src="../source/app10.js" defer></script>
+	</head>
+	<body class="">
+		<header class="header spacer">
+			<h1>Using APIs</h1>
+			<h3>Day 10 ¦ <a href="../index.html">Back</a></h3>
+		</header>
+		<section class="">
+			<div class="joke-container">
+				<h3>Dad Jokes</h3>
+				<h4>Don't Laugh Challenge</h4>
+				<div id="joke" class="joke">joke goes here</div>
+				<button id="joke-btn" class="joke-btn">Get a new Joke</button>
+			</div>
+		</section>
+		<section class="weather-container"  id="weatherContainer" >
+			<div id="searchContainer">
+				<div class="flex">
+					<input id="searchInput" type="text" class="searchControl" placeholder="City Name" required></input>
+					<button class="searchControl" id="searchBtn">Search</button>
+				</div>
+				<small>You may need to add the country code (i.e. Geneva, ch)</small>
+			</div>
+			<div id="weatherData" class="weather-data">
+				<h2>Weather App</h2>
+
+				<div id="weather" class="weather">
+					<h3 id="cityHeader"></h3>
+					<div id="weatherMain">
+						<div id="temperature"></div>
+						<div id="weatherDescriptionHeader"></div>
+						<div><img id="weatherIconImg"></div>
+					</div>
+					<div id="windSpeed" class="weather-button-details"></div>
+					<div id="humidity" class="weather-button-details"></div>
+
+
+			</div>
+		</section>
+		<footer class="footer">
+			<small></small>
+		</footer>
+	</body>
+</html>
