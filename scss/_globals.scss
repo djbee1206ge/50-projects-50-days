@@ -27,6 +27,7 @@
 
 	--lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
 	--bs-100: 0 0.3rem 0.3rem var(--clr-neutral-200);
+	--bs-200: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 	.bg-dark {
 		background-color: var(--clr-bg-700);
 	}
@@ -80,17 +81,14 @@ a {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 90rem;
-	width: clamp(18rem, 90vw, 90rem);
+	width: 97vw;
 	margin: 0 auto;
 }
 .header {
-	width: 100%;
-	padding: 1em 0;
-	text-align: center;
 	min-height: 6rem;
 	color: var(--clr-primary-400);
 }
+.header,
 .footer {
 	width: 100%;
 	padding: 1em 0;
@@ -102,8 +100,9 @@ a {
 	}
 }
 .main {
-	flex: 1;
-	max-width: 97vw;
+	width: 100%;
+	max-width: 90rem;
+	height: 100%;
 	margin: 0 auto;
 	border-radius: 1rem;
 	border: 0.05rem solid var(--clr-neutral-200);
@@ -142,7 +141,6 @@ hr {
 }
 .center {
 	display: grid;
-	height: 100%;
 	place-items: center;
 }
 .spacer-1 > * + * {

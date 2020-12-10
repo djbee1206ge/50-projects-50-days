@@ -1,0 +1,80 @@
+.day12-container {
+	h1 {
+		text-align: center;
+		margin: 3rem 0;
+	}
+	.faq-container {
+		width: 37.5rem;
+		margin: 3rem, auto 0 auto;
+		.faq {
+			background-color: transparent;
+			border: 0.05rem solid var(--clr-neutral-300);
+			border-radius: 0.75rem;
+			margin: 1.25rem 0;
+			padding: 2rem;
+			box-shadow: var(--bs-200);
+			overflow: hidden;
+			transition: all 400 ease;
+			position: relative;
+			&-toggle {
+				background-color: transparent;
+				border: 0;
+				cursor: pointer;
+				// display: flex;
+				// justify-content: center;
+				// align-items: center;
+				font-size: 1.5rem;
+				padding: 0;
+				position: absolute;
+				top: 1rem;
+				right: 1rem;
+				height: 4rem;
+				width: 4rem;
+				.fa-times {
+					display: none;
+				}
+			}
+			&.active {
+				background-color: #fff;
+				.faq-toggle {
+					color: #2eccbf;
+					cursor: pointer;
+				}
+				.fa-chevron-down {
+					display: none;
+				}
+				.fa-times {
+					display: block;
+				}
+				.faq-text {
+					display: block;
+				}
+				&::before,
+				&::after {
+					content: '\f075';
+					font-family: 'Font Awesome 5 Free';
+					font-size: 7rem;
+					color: #2ecc71;
+					opacity: 0.2;
+					position: absolute;
+					top: -0.5rem;
+					right: 2rem;
+					z-index: 0;
+				}
+				&::before {
+					top: -2.6rem;
+					right: 0;
+					color: #2eccbf;
+					transform: rotateY(180deg);
+				}
+			}
+			&-title {
+				margin: 0 2rem 0 0;
+			}
+			&-text {
+				display: none;
+				margin: 2rem 0 0;
+			}
+		}
+	}
+}

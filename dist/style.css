@@ -150,6 +150,7 @@
   --clr-bg-700: #333333;
   --lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
   --bs-100: 0 0.3rem 0.3rem var(--clr-neutral-200);
+  --bs-200: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
   /* ## Typography */
   --ff-base: 'Poppins Light';
   --fs-300: 0.8rem;
@@ -209,19 +210,16 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 90rem;
-  width: clamp(18rem, 90vw, 90rem);
+  width: 97vw;
   margin: 0 auto;
 }
 
 .header {
-  width: 100%;
-  padding: 1em 0;
-  text-align: center;
   min-height: 6rem;
   color: var(--clr-primary-400);
 }
 
+.header,
 .footer {
   width: 100%;
   padding: 1em 0;
@@ -233,8 +231,9 @@ a {
 }
 
 .main {
-  flex: 1;
-  max-width: 97vw;
+  width: 100%;
+  max-width: 90rem;
+  height: 100%;
   margin: 0 auto;
   border-radius: 1rem;
   border: 0.05rem solid var(--clr-neutral-200);
@@ -280,7 +279,6 @@ hr {
 
 .center {
   display: grid;
-  height: 100%;
   place-items: center;
 }
 
@@ -1189,5 +1187,127 @@ nav ul > li + li + li {
   background-color: rgba(0, 0, 0, 0.1);
   top: -0.5rem;
   left: 0;
+}
+
+#insert {
+  background-color: var(--clr-neutral-100);
+  text-align: center;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem;
+}
+
+.key {
+  position: relative;
+  border: 0.1rem solid var(--clr-bg-300);
+  padding: 0.5rem 1.5rem;
+  box-shadow: var(--bs-200);
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 10rem;
+  align-items: center;
+  font-size: var(--fs-600);
+  font-weight: var(--fw-700);
+}
+
+.key small {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  font-size: var(--fs-400);
+  text-align: center;
+  width: 100%;
+  color: var(--clr-neutral-300);
+  font-weight: var(--fw-300);
+}
+
+.day12-container h1 {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.day12-container .faq-container {
+  width: 37.5rem;
+  margin: 3rem, auto 0 auto;
+}
+
+.day12-container .faq-container .faq {
+  background-color: transparent;
+  border: 0.05rem solid var(--clr-neutral-300);
+  border-radius: 0.75rem;
+  margin: 1.25rem 0;
+  padding: 2rem;
+  box-shadow: var(--bs-200);
+  overflow: hidden;
+  transition: all 400 ease;
+  position: relative;
+}
+
+.day12-container .faq-container .faq-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.day12-container .faq-container .faq-toggle .fa-times {
+  display: none;
+}
+
+.day12-container .faq-container .faq.active {
+  background-color: #fff;
+}
+
+.day12-container .faq-container .faq.active .faq-toggle {
+  color: #2eccbf;
+  cursor: pointer;
+}
+
+.day12-container .faq-container .faq.active .fa-chevron-down {
+  display: none;
+}
+
+.day12-container .faq-container .faq.active .fa-times {
+  display: block;
+}
+
+.day12-container .faq-container .faq.active .faq-text {
+  display: block;
+}
+
+.day12-container .faq-container .faq.active::before, .day12-container .faq-container .faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 7rem;
+  color: #2ecc71;
+  opacity: 0.2;
+  position: absolute;
+  top: -0.5rem;
+  right: 2rem;
+  z-index: 0;
+}
+
+.day12-container .faq-container .faq.active::before {
+  top: -2.6rem;
+  right: 0;
+  color: #2eccbf;
+  transform: rotateY(180deg);
+}
+
+.day12-container .faq-container .faq-title {
+  margin: 0 2rem 0 0;
+}
+
+.day12-container .faq-container .faq-text {
+  display: none;
+  margin: 2rem 0 0;
 }
 /*# sourceMappingURL=style.css.map */
