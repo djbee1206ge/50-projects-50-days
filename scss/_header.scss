@@ -1,0 +1,10 @@
+.header {
+	text-align: center;
+	background-color: var(--clr-accent-100);
+	padding: 1rem;
+	color: var(--bg-100, white);
+	min-height: 3rem;
+	* + * {
+		margin-top: 1rem;
+	}
+}
