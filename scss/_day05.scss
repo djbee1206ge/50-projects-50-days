@@ -1,15 +1,20 @@
-.bil-bg {
-	min-height: 75vh;
-	width: 85vw;
-	background-image: url(https://source.unsplash.com/random);
-	background-size: cover;
-	background-position: center center;
-}
-.bil-loading-text {
-	position: absolute;
-	top: 50%;
-	left: 30%;
-	transform: translateY(-50%);
-	color: var(--clr-bg-100);
-	font-size: var(--fs-900);
+.day05 {
+	background-color: var(--bg-100);
+	display: grid;
+	.bil-bg {
+		height: 75vh;
+		width: auto;
+		background-image: url(https://source.unsplash.com/random);
+		background-size: cover;
+		background-position: center center;
+		align-self: center;
+	}
+	.bil-loading-text {
+		position: absolute;
+		top: 50%;
+		left: 30%;
+		transform: translateY(-50%);
+		color: var(--clr-bg-100);
+		font-size: var(--fs-900);
+	}
 }

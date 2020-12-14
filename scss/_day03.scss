@@ -8,10 +8,12 @@
 	padding: 3rem 7rem;
 	position: relative;
 	z-index: 1;
+	background-color: var(--bg-100);
+	color: var(--fg-900);
 
 	&.show-nav {
 		transform: rotate(-20deg);
-		+ nav li {
+		+ .day03-nav li {
 			opacity: 1;
 			transform: translateX(0);
 			transition-delay: 300ms;
@@ -27,7 +29,7 @@
 	left: -6.25rem;
 	.circle {
 		position: relative;
-		background-color: var(--clr-primary-500);
+		background-color: var(--clr-accent-100);
 		height: 12.5rem;
 		width: 12.5rem;
 		border-radius: 12.5rem;
@@ -40,7 +42,7 @@
 			background: transparent;
 			border: none;
 			font-size: var(--fs-600);
-			color: var(--clr-neutral-100);
+			color: var(--fg-100);
 			cursor: pointer;
 			&:focus {
 				outline: none;
@@ -59,7 +61,7 @@
 .content {
 	max-width: 90rem;
 	margin: 0 auto;
-	* + * {
+	bg * + * {
 		margin-top: 2em;
 	}
 	small {
@@ -68,6 +70,9 @@
 	img {
 		max-width: 100%;
 		flex: 1;
+	}
+	h1 {
+		color: var(--clr-accent-100);
 	}
 	p {
 		flex: 1;
@@ -78,7 +83,7 @@
 	}
 }
 
-nav {
+.day03-nav {
 	position: relative;
 
 	a {
@@ -98,7 +103,7 @@ nav {
 			margin-right: 0.5rem;
 		}
 	}
-	ul {
+	.day03 > li {
 		position: absolute;
 		list-style: none;
 		left: 0.5rem;
@@ -108,7 +113,7 @@ nav {
 		* + * {
 			margin-top: 1rem;
 		}
-		li {
+		> li {
 			opacity: 0;
 			transform: translateX(-100%);
 		}

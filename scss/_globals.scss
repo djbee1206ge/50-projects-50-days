@@ -5,10 +5,13 @@
 	--fg-300: #a8a8a8;
 	--fg-900: #202020;
 
-	--bg-100: hsl(344, 100%, 97%);
-	--bg-200: hsl(0, 100%, 90%);
-	--bg-300: hsl(200, 100%, 80%);
-	--bg-400: hsl(270, 50%, 85%);
+	--bg-100: hsl(0, 0%, 100%);
+	--bg-200: hsl(344, 100%, 97%);
+	--bg-300: hsl(0, 100%, 90%);
+	--bg-400: hsl(200, 100%, 80%);
+	--bg-500: hsl(270, 50%, 85%);
+	--bg-700: #cccccc;
+	--bg-800: #3a3a3a;
 
 	--clr-accent-100: hsl(344, 100%, 60%);
 	--clr-accent-200: hsl(0, 100%, 74%);
@@ -16,6 +19,7 @@
 	--clr-accent-400: hsl(219, 100%, 50%);
 
 	--lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
+	--rg-soundBoard: radial-gradient(hsl(344, 100%, 80%), hsl(344, 100%, 60%), hsl(344, 100%, 20%));
 
 	--bs-100: 0.1rem 0.1em 0.2rem rgba(0, 0, 0, 0.1);
 	--bs-200: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
@@ -40,4 +44,28 @@
 	--br-2: 2rem;
 	--br-3: 3rem;
 	--br-4: 4rem;
+}
+code {
+	background-color: var(--bg-700);
+	padding: 0.05rem 0.25rem;
+	border-radius: 0.2rem;
+	color: var(--fg-900);
+}
+
+.bg-dark {
+	background-color: var(--bg-800);
+	color: var(--fg-100);
+}
+.bg-accent-100 {
+	background-color: var(--clr-accent-100) !important;
+}
+.border {
+	border: 1px solid var(--fg-300);
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.center {
+	display: grid;
+	place-items: center;
 }

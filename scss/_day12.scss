@@ -1,4 +1,9 @@
-.day12-container {
+.day12 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-500);
 	h1 {
 		text-align: center;
 		margin: 3rem 0;
@@ -8,7 +13,7 @@
 		margin: 3rem, auto 0 auto;
 		.faq {
 			background-color: transparent;
-			border: 0.05rem solid var(--clr-neutral-300);
+			border: 0.05rem solid var(--fg-300);
 			border-radius: 0.75rem;
 			margin: 1.25rem 0;
 			padding: 2rem;
@@ -16,13 +21,10 @@
 			overflow: hidden;
 			transition: all 400 ease;
 			position: relative;
+			cursor: pointer;
 			&-toggle {
 				background-color: transparent;
 				border: 0;
-				cursor: pointer;
-				// display: flex;
-				// justify-content: center;
-				// align-items: center;
 				font-size: 1.5rem;
 				padding: 0;
 				position: absolute;
