@@ -1,0 +1,19 @@
+.day15 {
+    background-color: vaR(--clr-accent-400);
+    height: 25vh;
+    width: 100%;
+    font-family: 'Roboto Mono', sans-serif;
+    color: var(--fg-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    text-align: center;
+    @media(min-width: 40rem){
+        flex-direction: row;
+    }
+    .counter {
+        font-size: 3.75rem;
+    }
+}

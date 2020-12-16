@@ -64,8 +64,10 @@ code {
 }
 
 .center {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 *,
@@ -202,6 +204,7 @@ a {
   border: 0.05rem solid var(--clr-neutral-300);
   border-radius: 1rem;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .footer {
@@ -398,6 +401,7 @@ a {
 .day03 {
   font-family: 'Lato', sans-serif;
   width: 100%;
+  height: 75vh;
   overflow-x: hidden;
   background-color: var(--clr-bg-100);
   transform-origin: top left;
@@ -498,7 +502,12 @@ a {
 }
 
 .day03-nav {
-  position: relative;
+  position: abosolute;
+  bottom: 10rem;
+}
+
+.day03-nav ul {
+  margin: 0;
 }
 
 .day03-nav a {
@@ -1378,5 +1387,29 @@ nav.day14-nav-active .icon .line1 {
 
 nav.day14-nav-active .icon .line2 {
   transform: rotate(765deg) translateY(-4px);
+}
+
+.day15 {
+  background-color: vaR(--clr-accent-400);
+  height: 25vh;
+  width: 100%;
+  font-family: 'Roboto Mono', sans-serif;
+  color: var(--fg-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 40rem) {
+  .day15 {
+    flex-direction: row;
+  }
+}
+
+.day15 .counter {
+  font-size: 3.75rem;
 }
 /*# sourceMappingURL=style.css.map */

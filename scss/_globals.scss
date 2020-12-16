@@ -66,6 +66,8 @@ code {
 }
 
 .center {
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
