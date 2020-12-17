@@ -20,7 +20,7 @@ async function generateJoke() {
 }
 // ++++++++++++++WEATHER API+++++++++++++++
 
-let appId = '2ce5be4f2887b0bdca79f79ff16770fc';
+let appId = '686107215cf67f7bc1d7b8ffb03fcf4d';
 let units = 'metric';
 let searchMethod = 'q';
 const weatherContainer = document.getElementById('weatherContainer');

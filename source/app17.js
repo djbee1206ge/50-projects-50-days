@@ -34,7 +34,7 @@ function showMovies(movies) {
         <span class="${getClassByRate(vote_average)}">${vote_average}</span>
       </div>
       <div class="overview"><h3>overview</h3>
-      <small>Released: ${release_date}</small><br>
+      <small>Released: ${release_date}</small>
       <p>${overview}</p>
       </div>
 
