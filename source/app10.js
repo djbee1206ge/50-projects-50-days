@@ -34,7 +34,7 @@ const weatherData = document.getElementById('weatherData');
 
 function searchWeather(searchTerm) {
 	fetch(
-		`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${appId}&units=${units}`,
+		`http://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${appId}&units=metric`,
 	)
 		.then((result) => {
 			return result.json();
