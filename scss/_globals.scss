@@ -16,7 +16,8 @@
 	--clr-accent-100: hsl(344, 100%, 60%);
 	--clr-accent-200: hsl(0, 100%, 74%);
 	--clr-accent-300: hsl(270, 50%, 40%); // rebeccapurple
-	--clr-accent-400: hsl(219, 100%, 50%);
+	--clr-accent-400: hsl(219, 100%, 60%);
+	--clr-accent-500: hsl(219, 100%, 30%);
 
 	--lg-100: linear-gradient(90deg, var(--clr-primary-600a), var(--clr-primary-600b));
 	--rg-soundBoard: radial-gradient(hsl(344, 100%, 80%), hsl(344, 100%, 60%), hsl(344, 100%, 20%));
@@ -25,6 +26,7 @@
 	--bs-200: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 	/* ## Typography */
 	--ff-base: 'Poppins', sans-serif;
+	--fs-200: 0.7rem;
 	--fs-300: 0.8rem;
 	--fs-400: 1rem;
 	--fs-500: 1.25rem;
@@ -44,6 +46,11 @@
 	--br-2: 2rem;
 	--br-3: 3rem;
 	--br-4: 4rem;
+
+	// day16 drink calculator
+		--border-color: #144fc6;
+		--fill-color: #6ab3f8;
+	
 }
 code {
 	background-color: var(--bg-700);
@@ -58,6 +65,9 @@ code {
 }
 .bg-accent-100 {
 	background-color: var(--clr-accent-100) !important;
+}
+.bg-accent-400 {
+	background-color: var(--clr-accent-400) !important;
 }
 .border {
 	border: 1px solid var(--fg-300);
