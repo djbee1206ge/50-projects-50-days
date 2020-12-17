@@ -43,6 +43,9 @@
   --br-4: 4rem;
   --border-color: #144fc6;
   --fill-color: #6ab3f8;
+  --primary-clr: hsl(235, 40%, 20%);
+  --secondary-clr: hsl(235, 35%, 30%);
+  --placeholder-clr: hsl(235, 40%, 60%);
 }
 
 code {
@@ -1513,5 +1516,111 @@ nav.day14-nav-active .icon .line2 {
 .text {
   text-align: center;
   margin: 0 0 5px;
+}
+
+.day17 {
+  width: 100%;
+  background-color: var(--primary-clr);
+  border-radius: 1rem;
+}
+
+.day17 header {
+  padding: 1rem;
+  display: flex;
+  background-color: var(--secondary-clr);
+  justify-content: flex-end;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.day17 header .search {
+  background-color: transparent;
+  color: var(--fg-100);
+  padding: 0.2rem 1rem;
+  border: 0.1rem solid var(--primary-clr);
+  border-radius: 2rem;
+}
+
+.day17 header .search::placeholder {
+  color: var(--placeholder-clr);
+}
+
+.day17 header .search:focus {
+  background-color: var(--primary-clr);
+  outline: none;
+}
+
+.day17 #main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.day17 #main .movie {
+  width: 18.75rem;
+  background-color: var(--secondary-clr);
+  box-shadow: rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.day17 #main .movie:hover .overview {
+  transform: translateY(0);
+}
+
+.day17 #main .movie img {
+  width: 100%;
+}
+
+.day17 #main .movie-info {
+  color: var(--fg-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.day17 #main .movie-info span {
+  background-color: var(--primary-clr);
+  padding: 0.01rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 700;
+}
+
+.day17 #main .movie-info span.green {
+  color: #24c23e;
+}
+
+.day17 #main .movie-info span.red {
+  color: #c51616;
+}
+
+.day17 #main .movie-info span.orange {
+  color: #ffa600;
+}
+
+.day17 #main .movie .overview {
+  position: absolute;
+  background-color: var(--bg-100);
+  padding: 2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: var(--primary-clr);
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: 300ms ease;
+}
+
+.day17 #main .movie .overview h3 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.day17 #main .movie .overview p {
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
