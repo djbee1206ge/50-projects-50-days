@@ -46,6 +46,7 @@
   --primary-clr: hsl(235, 40%, 20%);
   --secondary-clr: hsl(235, 35%, 30%);
   --placeholder-clr: hsl(235, 40%, 60%);
+  --arrow-clr: hsl(40, 100%, 50%);
 }
 
 code {
@@ -1631,5 +1632,104 @@ nav.day14-nav-active .icon .line2 {
 
 .day17 #main .movie .overview p {
   margin-top: 1rem;
+}
+
+.day18 {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: 400ms ease;
+  position: relative;
+}
+
+.day18 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day18 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.day18::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.day18 .slider-container {
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.day18 .slider-container .slide {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  opacity: 0;
+  background-position: center center;
+  background-size: cover;
+  transition: 400ms ease;
+  z-index: 1;
+}
+
+.day18 .slider-container .slide.active {
+  opacity: 1;
+}
+
+.day18 .slider-container .arrow {
+  position: fixed;
+  background-color: transparent;
+  height: 3rem;
+  width: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0.1rem solid var(--arrow-clr);
+  cursor: pointer;
+}
+
+.day18 .slider-container .arrow:focus {
+  outline: 0;
+}
+
+.day18 .slider-container .arrow-left {
+  left: calc(15vw - 3rem);
+  border-right: none;
+}
+
+.day18 .slider-container .arrow-right {
+  right: calc(15vw - 3rem);
+  border-left: none;
+}
+
+.day18 .slider-container .arrow i {
+  color: var(--arrow-clr);
+  font-size: 2rem;
+  transition: 250ms ease;
+}
+
+.day18 .slider-container .arrow i:focus, .day18 .slider-container .arrow i:hover {
+  color: var(--fg-100);
 }
 /*# sourceMappingURL=style.css.map */

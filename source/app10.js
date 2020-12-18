@@ -20,9 +20,7 @@ async function generateJoke() {
 }
 // ++++++++++++++WEATHER API+++++++++++++++
 
-let appId = '686107215cf67f7bc1d7b8ffb03fcf4d';
-let units = 'metric';
-let searchMethod = 'q';
+const searchTerm = document.getElementById('searchInput').value;
 const weatherContainer = document.getElementById('weatherContainer');
 const weatherDescriptionHeader = document.getElementById('weatherDescriptionHeader');
 const temperatureElem = document.getElementById('temperature');
@@ -32,21 +30,20 @@ const cityHeader = document.getElementById('cityHeader');
 const weatherIcon = document.getElementById('weatherIconImg');
 const weatherData = document.getElementById('weatherData');
 
-function searchWeather(searchTerm) {
-	fetch(
-		`http://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${appId}&units=metric`,
-	)
-		.then((result) => {
-			return result.json();
-		})
-		.then((result) => {
-			init(result);
-		});
-}
+const API_KEY = '686107215cf67f7bc1d7b8ffb03fcf4d';
+const SEARCH_API = `http://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${API_KEY}&units=metric`
+searchWeather(SEARCH_API)
+async function searchWeather(url) {
+	const res = await fetch(url)
+	const data = await res.json()
+	resultFromServer = data
+	console.log(data)
+	}
+
+
 
 function init(resultFromServer) {
-	console.log(resultFromServer.weather);
-	switch (resultFromServer.weather[0].main) {
+		switch (resultFromServer.weather[0].main) {
 		case 'Clear':
 			weatherContainer.style.backgroundImage = 'url("../assets/img/clear.jpg")';
 			break;
@@ -82,8 +79,6 @@ function init(resultFromServer) {
 }
 
 document.getElementById('searchBtn').addEventListener('click', () => {
-	let searchTerm = document.getElementById('searchInput').value;
-	console.log(searchTerm);
 	if (searchTerm) {
 		searchWeather(searchTerm);
 	} else {
