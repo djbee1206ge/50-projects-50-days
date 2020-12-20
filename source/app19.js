@@ -10,32 +10,39 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 
 toggle.addEventListener('click', (e) => {
     const html = document.querySelector('html')
-    if(html.classList.contains('dark')) {
-        html.classList.remove('dark')
-        e.target.innerHTML = 'Dark mode'
+    if(html.classList.contains('clock-dark')) {
+        html.classList.remove('clock-dark')
+        e.target.innerHTML = 'clock-dark mode'
     } else {
-        html.classList.add('dark')
+        html.classList.add('clock-dark')
         e.target.innerHTML = 'Light mode'
     }
 })
+
+
+
+
 
 function setTime() {
     const time = new Date();
     const month = time.getMonth()
     const day = time.getDay()
     const date = time.getDate()
-    const hours = time.getHours()
-    const hoursForClock = hours % 12
-    const minutes = time.getMinutes()
-    const seconds = time.getSeconds()
-    const ampm = hours >= 12 ? 'PM' : 'AM'
+    const ampm = time.getHours() >= 12 ? 'PM' : 'AM'
+    const hrs = time.getHours() % 12
+    const min = time.getMinutes()
+ 
+    const hrsRotate = ((hrs*60)+min)/2
+    const minRotate = scale(time.getMinutes(), 0, 59, 0, 360)
+    const secRotate = scale(time.getSeconds(), 0, 59, 0, 360)
+    // 1096
 
-    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 11, 0, 360)}deg)`
-    minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 59, 0, 360)}deg)`
-    secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`
+    hourEl.style.transform = `translate(-50%, -100%) rotate(${hrsRotate}deg)`
+    minuteEl.style.transform = `translate(-50%, -100%) rotate(${minRotate}deg)`
+    secondEl.style.transform = `translate(-50%, -100%) rotate(${secRotate}deg)`
 
-    timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`
-    dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
+    timeEl.innerHTML = `${time.getHours() % 12}:${time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes()} ${ampm}`
+    dateEl.innerHTML = `${days[day]}, <span class="circle">${date}</span> ${months[month]} `
 
   
 }
@@ -48,3 +55,8 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 setTime()
 
 setInterval(setTime, 1000)
+
+
+
+
+// hours = seeTime.getHours*3600 + seeTime.getMinutes * 60 + seeTime.getSeconds

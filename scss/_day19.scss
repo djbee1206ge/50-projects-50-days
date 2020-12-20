@@ -1,3 +1,17 @@
+:root {
+  	// clock
+	--clock-primary: #000;
+	--clock-secondary: #fff;
+}
+html.clock-dark {
+	--clock-primary: #fff;
+	--clock-secondary: #333;
+	background-color: #111;
+	color: var(--clock-primary);
+}
+html {
+  transition: all 500ms ease-in;
+}
 .day19 {
   header {
     position: fixed;
@@ -11,9 +25,207 @@
     left: 0;
     right: 0;
   }
+  font-family: 'Heebo', sans-serif;
   display: flex;
-  height: 100vh;
   flex-direction: column;
-  justify-content: center;
+  height: 100vh;
+  justify-content: space-evenly;
   align-items: center;
+  .toggle {
+    background: var(--clock-primary);
+    color: var(--clock-secondary);
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  .clock{
+    position: relative;
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+    border: 0.05rem solid #aaa;
+    .center-point{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: hsl(7, 80%, 60%);
+      height: 0.7rem;
+      width: 0.7rem;
+      border-radius: 50%;
+      &::after {
+        content:'';
+        position: absolute;
+        width: 0.35rem;
+        height: 0.35rem;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--clock-primary);
+      }
+
+    
+    }
+    .hand {
+    background-color: var(--clock-primary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    &::after {
+      content: '';
+    }
+    
+    &.hour {
+      background-color: var(--clock-primary);
+      height: 4.8rem;
+      width: 0.7rem;
+      transform: translate(-50%, -100%) rotate(0deg);
+      &::after{
+        position: absolute;
+        content: '';
+        background-color:transparent;
+        border: 0.25rem solid var(--clock-primary);
+        top: -1.2rem;
+        transform: translateX(-25%);
+        border-radius: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      
+    }
+    &.minute {
+      width: 0.35rem;
+      transform: translate(-50%, -100%) rotate(0deg);
+      height: 6.25rem;
+
+      }
+    &.second {
+      width: 0.17rem;
+        transform: translate(-50%, -100%) rotate(0deg);
+        background-color: red;
+        height: 6.25rem;
+        transition: all 500ms cubic-bezier(.51,.49,.65,1.51);
+
+      }
+    }
+    &-face{
+      position: absolute;
+
+    }
+    &-face-01 {
+      position: absolute;
+      left: 72%;
+      top: 12%;
+      transform: translate(-50%, -50%);
+    }
+    &-face-02 {
+      position: absolute;
+      right: 7%;
+      top: 28%;
+      transform: translate(-50%, -50%);
+    }
+    &-face-03 {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-face-04 {
+      position: absolute;
+      right: 7%;
+      bottom: 15%;
+      transform: translate(-50%, -50%);
+    }
+    &-face-05 {
+      position: absolute;
+      right: 25%;
+      bottom: 0%;
+      transform: translate(-50%, -50%);
+    }
+    &-face-06 {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0%);
+    }
+    &-face-07 {
+      position: absolute;
+      left: 28%;
+      bottom: 6%;
+      transform: translate(-50%, 0%);
+    }
+    &-face-08 {
+      position: absolute;
+      left: 12%;
+      bottom: 21%;
+      transform: translate(-50%, 0%);
+    }
+    &-face-09 {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+    &-face-10 {
+      position: absolute;
+      left: 4%;
+      top: 28%;
+      transform: translate(50%, -50%);
+    }
+    &-face-11 {
+      position: absolute;
+      left: 20%;
+      top: 14%;
+      transform: translate(50%, -50%);
+    }
+    &-face-12 {
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, 0%);
+    }
+  }
+  .clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .time {
+      color: var(--clock-primary);
+      margin-top: 1.5rem;
+      font-size: 5rem;
+        }
+    .date {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      font-weight: 300;
+      font-size: 3rem;
+      line-height: 2.75rem;
+      span{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(214, 214, 214);
+        color: var(--clock-secondary);
+        padding: 0.15rem 0.25rem 0;
+        margin: 0 1.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+  }
+
+
 }
+
