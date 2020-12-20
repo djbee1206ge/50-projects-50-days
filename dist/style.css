@@ -2070,4 +2070,65 @@ html {
     opacity: 0;
   }
 }
+
+.day21 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  background-color: var(--clr-accent-400);
+}
+
+.day21 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day21 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 45rem) {
+  .day21 {
+    flex-direction: row;
+  }
+}
+
+.day21 .empty {
+  width: 8rem;
+  height: 8rem;
+  border: 0.2rem solid var(--fg-900);
+  background-color: var(--bg-100);
+}
+
+.day21 .empty.hovered {
+  background-color: var(--bg-800);
+  border-color: var(--fg-100);
+  border: dashed;
+}
+
+.day21 .fill {
+  background-image: url("https://source.unsplash.com/random/150x150");
+  background-position: center center;
+  background-size: cover;
+  width: 7.65rem;
+  height: 7.65rem;
+  cursor: grab;
+  cursor: move;
+}
+
+.day21 .fill:active {
+  cursor: grabbing;
+}
+
+.day21 .fill.hold {
+  border: 0.25rem solid var(--fg-300);
+}
 /*# sourceMappingURL=style.css.map */
