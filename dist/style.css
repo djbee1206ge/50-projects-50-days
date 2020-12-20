@@ -1732,4 +1732,48 @@ nav.day14-nav-active .icon .line2 {
 .day18 .slider-container .arrow i:focus, .day18 .slider-container .arrow i:hover {
   color: var(--fg-100);
 }
+
+.day19 {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day19 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day19 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.day20 {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day20 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day20 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 /*# sourceMappingURL=style.css.map */
