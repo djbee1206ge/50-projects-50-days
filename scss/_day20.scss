@@ -16,4 +16,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--clr-accent-400);
+  > button {
+    position: relative;
+    background-color: purple;
+    border: 0.1rem solid purple;
+    color: var(--fg-100);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    letter-spacing: 0.1rem;
+    padding: 1.25rem 2rem;
+    overflow: hidden;
+    margin: 1rem 0;
+    &:focus {
+      outline: none;
+    }
+    .circle {
+      position: absolute;
+      background-color: var(--bg-100);
+      height: 6.25rem;
+      width: 6.25rem;
+      border-radius: 12rem;
+      transform: translate(-50%, -50%) scale(0);
+      animation: scale 500ms ease-out;     
+    }
+  }
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }

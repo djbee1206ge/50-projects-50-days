@@ -27,10 +27,17 @@ html {
   }
   font-family: 'Heebo', sans-serif;
   display: flex;
+justify-content: center;
+align-items: center;
+  min-height:100vh;
+  .wrapper {
+  display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  min-height: 70vh;
+  }
+
   .toggle {
     background: var(--clock-primary);
     color: var(--clock-secondary);
@@ -44,8 +51,8 @@ html {
   }
   .clock{
     position: relative;
-    height: 12.5rem;
-    width: 12.5rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     border: 0.05rem solid #aaa;
     .center-point{
@@ -83,7 +90,7 @@ html {
     
     &.hour {
       background-color: var(--clock-primary);
-      height: 4.8rem;
+      height: 3.7rem;
       width: 0.7rem;
       transform: translate(-50%, -100%) rotate(0deg);
       &::after{
@@ -102,14 +109,14 @@ html {
     &.minute {
       width: 0.35rem;
       transform: translate(-50%, -100%) rotate(0deg);
-      height: 6.25rem;
+      height: 5rem;
 
       }
     &.second {
       width: 0.17rem;
         transform: translate(-50%, -100%) rotate(0deg);
         background-color: red;
-        height: 6.25rem;
+        height: 5rem;
         transition: all 500ms cubic-bezier(.51,.49,.65,1.51);
 
       }
@@ -199,7 +206,7 @@ html {
     .time {
       color: var(--clock-primary);
       margin-top: 1.5rem;
-      font-size: 5rem;
+      font-size: 3rem;
         }
     .date {
       display: flex;
@@ -210,7 +217,7 @@ html {
       text-transform: uppercase;
       letter-spacing: 0.25rem;
       font-weight: 300;
-      font-size: 3rem;
+      font-size: 1.75rem;
       line-height: 2.75rem;
       span{
         display: inline-flex;

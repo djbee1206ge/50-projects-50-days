@@ -12,7 +12,7 @@ toggle.addEventListener('click', (e) => {
     const html = document.querySelector('html')
     if(html.classList.contains('clock-dark')) {
         html.classList.remove('clock-dark')
-        e.target.innerHTML = 'clock-dark mode'
+        e.target.innerHTML = 'Dark mode'
     } else {
         html.classList.add('clock-dark')
         e.target.innerHTML = 'Light mode'

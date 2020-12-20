@@ -1,10 +1,25 @@
 .header {
+	
 	text-align: center;
 	background-color: var(--clr-accent-100);
-	padding: 1rem;
+	padding: 0.5rem;
 	color: var(--bg-100, white);
-	min-height: 3rem;
 	* + * {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1rem;
+	}
+	@media (min-width: 40rem) {
+		padding: 1rem;
+		h1 {
+			font-size: 2rem;
+		}
+		h3 {
+			font-size: 1.25rem;
+		}
 	}
 }
