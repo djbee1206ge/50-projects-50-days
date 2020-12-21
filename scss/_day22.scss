@@ -1,0 +1,58 @@
+.day22 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-700);
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .h1-small {
+    font-weight: 200;
+    font-size: 1.5rem;
+  }
+
+ //temp
+ canvas {
+   border: 0.1rem solid var(--clr-accent-100);
+   background-color: var(--bg-100);
+   margin-top: 2.7rem;
+
+ }
+ .toolbox {
+  background-color: var(--clr-accent-100);
+  border: 0.1rem solid (--clr-accent-100);
+  display: flex;
+  width: 742px;
+  > * {
+    border: none;
+    background-color: var(--bg-100);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+ }
+
+}

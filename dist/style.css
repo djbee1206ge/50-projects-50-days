@@ -207,11 +207,26 @@ a {
 }
 
 .header h1 {
+  font-weight: 300;
   font-size: 1.5rem;
 }
 
 .header h3 {
   font-size: 1rem;
+  font-weight: 300;
+}
+
+.header h3 > a {
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.header h3 > a:hover {
+  background-color: #ff7096;
+}
+
+.header h3 > a:active {
+  transform: scale(0.97);
 }
 
 @media (min-width: 40rem) {
@@ -2130,5 +2145,64 @@ html {
 
 .day21 .fill.hold {
   border: 0.25rem solid var(--fg-300);
+}
+
+.day22 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-700);
+}
+
+.day22 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day22 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.day22 .h1-small {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.day22 canvas {
+  border: 0.1rem solid var(--clr-accent-100);
+  background-color: var(--bg-100);
+  margin-top: 2.7rem;
+}
+
+.day22 .toolbox {
+  background-color: var(--clr-accent-100);
+  border: 0.1rem solid --clr-accent-100;
+  display: flex;
+  width: 742px;
+}
+
+.day22 .toolbox > * {
+  border: none;
+  background-color: var(--bg-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.day22 .toolbox > *:last-child {
+  margin-left: auto;
 }
 /*# sourceMappingURL=style.css.map */
