@@ -1,0 +1,71 @@
+.day23 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-accent-300);
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .h1-small {
+    font-weight: 200;
+    font-size: 1.5rem;
+  }
+
+  .kinetic {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      // to create a triangle
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: 3rem solid transparent;
+      border-bottom-color: var(--fg-100);
+      animation: rotateA 3000ms linear infinite 750ms;
+    }
+    &::before {
+      transform: rotate(90deg);
+      animation: rotateB 3000ms linear infinite;
+    }
+    }
+  }
+
+
+@keyframes rotateA {
+  0%, 25% {
+    transform: rotate(0deg);
+  }
+  50%, 75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateB {
+  0%, 25% {
+    transform: rotate(90deg);
+  }
+  50%, 75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
