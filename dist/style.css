@@ -6,12 +6,13 @@
   --fg-900: #202020;
   --bg-100: hsl(0, 0%, 100%);
   --bg-200: hsl(344, 100%, 97%);
-  --bg-300: hsl(0, 100%, 90%);
+  --bg-300:  hsla(180, 87%, 41%, 0.3);
+  --bg-300-light:  hsla(180, 87%, 41%, 0.15);
   --bg-400: hsl(200, 100%, 80%);
   --bg-500: hsl(270, 50%, 85%);
   --bg-700: #cccccc;
   --bg-800: #3a3a3a;
-  --clr-accent-100: hsl(344, 100%, 60%);
+  --clr-accent-100: hsl(180, 100%, 42%);
   --clr-accent-200: hsl(0, 100%, 74%);
   --clr-accent-300: hsl(270, 50%, 40%);
   --clr-accent-400: hsl(219, 100%, 60%);
@@ -2277,6 +2278,108 @@ html {
   }
   100% {
     transform: rotate(450deg);
+  }
+}
+
+.day24 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-300);
+}
+
+.day24 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.day24 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.day24 .h1-small {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.day24 .card {
+  width: 20rem;
+  border-radius: 0.625rem;
+  box-shadow: var(--bs-200);
+  background-color: var(--bg-100);
+  overflow: hidden;
+}
+
+.day24 .card-header {
+  height: 12.5rem;
+}
+
+.day24 .card-header img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.day24 .card-content {
+  padding: 2rem;
+}
+
+.day24 .card-excerpt {
+  margin-top: 1rem;
+  color: #777777;
+  line-height: 1.4;
+}
+
+.day24 .card .author {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.day24 .card .author img {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.day24 .card .author-info {
+  margin-left: 1rem;
+  width: 75%;
+}
+
+.day24 .card .author-info small {
+  color: #aaa;
+}
+
+.day24 .card .animated-bg {
+  background-image: linear-gradient(to right, #f6f7f8 0%, var(--bg-300-light) 10%, #f6f7f8 20%, #f6f7f8 100%);
+  background-size: 200% 100%;
+  animation: bgPos 1500ms linear infinite;
+}
+
+.day24 .card .animated-bg-text {
+  outline: 1px red;
+  display: inline-block;
+  border-radius: 3rem;
+  margin: 0;
+  height: 0.625rem;
+  width: 100%;
+  animation: bgPos 1500ms linear infinite;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
