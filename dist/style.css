@@ -447,14 +447,14 @@ a {
 }
 
 .day03 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
   width: 100%;
   height: 75vh;
   overflow-x: hidden;
   background-color: var(--clr-bg-100);
-  transform-origin: top left;
-  transition: transform 300ms linear;
-  padding: 3rem 7rem;
+  transform-origin: top left;
+  transition: transform 300ms linear;
+  padding: 3rem 7rem;
   position: relative;
   z-index: 1;
   background-color: var(--bg-100);
@@ -465,7 +465,8 @@ a {
   transform: rotate(-20deg);
 }
 
-.day03.show-nav + .day03-nav li {
+.day03.show-nav + .day03-nav
+li {
   opacity: 1;
   transform: translateX(0);
   transition-delay: 300ms;
@@ -473,6 +474,41 @@ a {
 
 .day03.show-nav .circle {
   transform: rotate(-90deg);
+}
+
+.day03 .content {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.day03 .content bg
+*
++ * {
+  margin-top: 2em;
+}
+
+.day03 .content small {
+  color: var(--clr-neutral-300);
+}
+
+.day03 .content img {
+  max-width: 100%;
+  flex: 1;
+}
+
+.day03 .content h1 {
+  color: var(--clr-accent-100);
+}
+
+.day03 .content > p {
+  flex: 1;
+}
+
+@media (min-width: 62rem) {
+  .day03 .content > p {
+    columns: 2;
+    column-gap: 2rem;
+  }
 }
 
 .circle-container {
@@ -487,7 +523,7 @@ a {
   height: 12.5rem;
   width: 12.5rem;
   border-radius: 12.5rem;
-  transition: transform 300ms linear;
+  transition: transform 300ms linear;
 }
 
 .circle-container .circle button {
@@ -513,40 +549,7 @@ a {
 .circle-container .circle button#close {
   top: 60%;
   transform: rotate(90deg);
-  transform-origin: top left;
-}
-
-.content {
-  max-width: 90rem;
-  margin: 0 auto;
-}
-
-.content bg * + * {
-  margin-top: 2em;
-}
-
-.content small {
-  color: var(--clr-neutral-300);
-}
-
-.content img {
-  max-width: 100%;
-  flex: 1;
-}
-
-.content h1 {
-  color: var(--clr-accent-100);
-}
-
-.content p {
-  flex: 1;
-}
-
-@media (min-width: 62rem) {
-  .content p {
-    columns: 2;
-    column-gap: 2rem;
-  }
+  transform-origin: top left;
 }
 
 .day03-nav {
@@ -561,12 +564,12 @@ a {
 .day03-nav a {
   display: inline-block;
   width: 100%;
-  padding: 0.2rem 0.75rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 2rem;
   cursor: pointer;
   text-decoration: none;
   color: var(--clr-neutral-100);
-  transition: all 300ms linear;
+  transition: all 300ms linear;
 }
 
 .day03-nav a:hover {
@@ -578,30 +581,39 @@ a {
   margin-right: 0.5rem;
 }
 
-.day03-nav .day03 > li {
+.day03-nav .day03
+> li {
   position: absolute;
   list-style: none;
   left: 0.5rem;
   bottom: 0.5rem;
   font-size: 1.5rem;
-  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in;
 }
 
-.day03-nav .day03 > li * + * {
+.day03-nav .day03
+> li *
++ * {
   margin-top: 1rem;
 }
 
-.day03-nav .day03 > li > li {
+.day03-nav .day03
+> li > li {
   opacity: 0;
   transform: translateX(-100%);
 }
 
-.day03-nav .day03 > li > li + li {
+.day03-nav .day03
+> li > li
++ li {
   margin-left: 1rem;
   transform: translateX(-150%);
 }
 
-.day03-nav .day03 > li > li + li + li {
+.day03-nav .day03
+> li > li
++ li
++ li {
   margin-left: 2rem;
   transform: translateX(-200%);
 }
@@ -2381,5 +2393,139 @@ html {
   100% {
     background-position: -150% 0;
   }
+}
+
+.day25 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+@media (max-width: 40rem) {
+  .day25 {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+
+.day25 main {
+  flex: 2;
+  position: relative;
+  max-width: 80rem;
+  margin: 2vh auto;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 40rem) {
+  .day25 main {
+    width: 96vw;
+  }
+}
+
+.day25 .h1-small {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+.day25 section {
+  padding: 1rem;
+}
+
+.day25 section p,
+.day25 section + section,
+.day25 .content h3 {
+  margin-top: 1rem;
+}
+
+.day25 .hero {
+  position: relative;
+  background-image: url(../assets/img/coder.jpg);
+  color: var(--fg-100);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: -2;
+}
+
+.day25 .hero h1 {
+  font-size: 3rem;
+  margin: -1em 0 1em;
+}
+
+@media (max-width: 40rem) {
+  .day25 .hero h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.day25 .hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.day25 .nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+  padding: 2rem 1rem;
+  background-color: #222;
+  display: flex;
+  justify-content: space-between;
+  align-self: start;
+}
+
+.day25 .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3rem;
+}
+
+@media (max-width: 40rem) {
+  .day25 .nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.day25 .nav ul li > a:hover {
+  font-weight: 700;
+}
+
+.day25 .nav .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 40rem) {
+  .day25 .nav .hamburger {
+    display: inline-block;
+  }
+}
+
+.day25 .nav.sticky {
+  background-color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.05) 100%);
+  color: #000;
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
