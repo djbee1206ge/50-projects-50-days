@@ -1,15 +1,18 @@
 .form-container {
-	display: grid;
-	place-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	margin: 0 auto;
 	padding: 2rem;
-	min-height: 75vh;
+	min-height: 50vh;
 	color: var(--fg-100);
 	text-align: center;
 	border-radius: 1rem;
 	h2 {
 		margin-bottom: 2rem;
+		color: #000;
 	}
 	> form {
 		display: flex;
@@ -19,7 +22,7 @@
 		padding: 2rem;
 		max-width: 21rem;
 		margin: 0 auto;
-		background-color: rgba(0, 0, 0, 0.2);
+		background-color: var(--clr-accent-100);
 
 		> * + * {
 			margin-top: 1rem;
@@ -60,14 +63,15 @@
 	.form-control {
 		position: relative;
 		input {
+			margin: 2rem 0;
 			background-color: transparent;
 			border: 0;
 			border-bottom: 0.125rem solid white;
 			display: block;
 			width: 100%;
-			padding: 1rem 0;
+			padding: 0 1rem;
 			font-size: var(--fs-500);
-			color: var(--clr-neutral-100);
+
 			&:focus,
 			&:valid {
 				outline: none;
@@ -80,7 +84,7 @@
 		}
 		label {
 			position: absolute;
-			top: 1rem;
+			top: 2rem;
 			left: 0;
 			span {
 				display: inline-block;

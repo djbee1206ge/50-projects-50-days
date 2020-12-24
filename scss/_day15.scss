@@ -1,19 +1,34 @@
 .day15 {
-    background-color: vaR(--clr-accent-400);
-    height: 25vh;
-    width: 100%;
-    font-family: 'Roboto Mono', sans-serif;
-    color: var(--fg-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:2rem;
-    text-align: center;
-    @media(min-width: 40rem){
-        flex-direction: row;
+    
+    flex: 2;
+  }
+  .border {
+    background-color: var(--clr-accent-400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 75vw;
+    @media (max-width: 50em){
+      flex-direction: column;
+      height: min-content;
     }
-    .counter {
-        font-size: 3.75rem;
+    .counter-container {
+      text-align: center;
+      color: var(--fg-100);
+      padding: 3rem;
+      .counter {
+        font-size: 3rem;
+      }      
+      
     }
+  }
 }

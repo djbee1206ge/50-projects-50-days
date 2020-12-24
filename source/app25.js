@@ -5,24 +5,28 @@ const menu = document.getElementById('menu')
 // listen to scroll event
 window.addEventListener('scroll', fixNav)
 hamburger.addEventListener('click', () => {
-  if(iTag.classList.contains('fa-bars')) {
+  if (iTag.classList.contains('fa-bars')) {
     iTag.classList.remove('fa-bars')
-    iTag.classList.add('fa-times')   
+    iTag.classList.add('fa-times')
     menu.style.display = 'flex'
-     
-  }else{
+
+  } else {
     iTag.classList.add('fa-bars')
-    iTag.classList.remove('fa-times') 
+    iTag.classList.remove('fa-times')
     menu.style.display = 'none'
   }
 })
 
 function fixNav() {
+  nav.classList.remove('sticky')
+
   //find scrollY value and height of nav
-  
-  if(window.scrollY > nav.offsetHeight * 2) {
+
+  if (window.scrollY > nav.offsetHeight * 2) {
     nav.classList.add('sticky')
-  }else{
-        nav.classList.remove('sticky')
+  } else {
+    nav.classList.remove('sticky')
   }
 }
+
+fixNav()

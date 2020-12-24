@@ -34,7 +34,7 @@ function setTime() {
  
     const hrsRotate = ((hrs*60)+min)/2
     const minRotate = scale(time.getMinutes(), 0, 59, 0, 360)
-    const secRotate = Math.floor(scale(time.getSeconds(), 0, 590, 0, 360))
+    const secRotate = Math.floor(scale(time.getSeconds(), 0, 59, 0, 360))
   
 
     hourEl.style.transform = `translate(-50%, -100%) rotate(${hrsRotate}deg)`

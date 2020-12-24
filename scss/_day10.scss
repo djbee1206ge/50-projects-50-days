@@ -1,3 +1,11 @@
+.day10 {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	section{
+		flex: 2;
+	}
+}
 .joke {
 	font-size: var(--fs-500);
 	padding: 0.5em;

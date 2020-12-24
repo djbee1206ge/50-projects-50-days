@@ -1,10 +1,7 @@
-const openTilt = document.getElementById('open');
-const closeTilt = document.getElementById('close');
-const tiltArticle = document.querySelector('.day03');
+const open = document.getElementById('open')
+const close = document.getElementById('close')
+const container = document.querySelector('.container')
 
-openTilt.addEventListener('click', () => {
-	tiltArticle.classList.add('show-nav');
-});
-closeTilt.addEventListener('click', () => {
-	tiltArticle.classList.remove('show-nav');
-});
+open.addEventListener('click', () => container.classList.add('show-nav'))
+
+close.addEventListener('click', () => container.classList.remove('show-nav'))
