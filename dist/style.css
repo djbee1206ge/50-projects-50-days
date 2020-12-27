@@ -2633,6 +2633,11 @@ html {
 .day26 .slider-container .left-slide > div h2 {
   font-size: 2.5rem;
   margin: -2rem 0 0.625rem;
+  text-shadow: 0 0 2px #333;
+}
+
+.day26 .slider-container .left-slide > div p {
+  text-shadow: 0 0 2px #333;
 }
 
 @media (max-width: 40rem) {
@@ -2693,5 +2698,80 @@ html {
   transform: translateY(-100%);
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+
+.day27 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  position: relative;
+  background-color: var(--clr-accent-300);
+}
+
+.day27 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.day27 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.day27 main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.day27 main button {
+  color: var(--clr-accent-300);
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.day27 main button:hover {
+  background-color: var(--bg-200);
+}
+
+.day27 main button:active {
+  transform: scale(0.98);
+}
+
+.day27 main .toasts {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  right: 1rem;
+  bottom: 2.5rem;
+}
+
+.day27 main .toasts .toast {
+  background-color: var(--bg-100);
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+}
+
+.day27 main .toasts .toast.info {
+  color: var(--clr-accent-300);
+  background-color: #dcb8ff;
+}
+
+.day27 main .toasts .toast.succes {
+  color: green;
+  background-color: #70fb70;
+}
+
+.day27 main .toasts .toast.error {
+  color: red;
+  background-color: #ffcbcb;
 }
 /*# sourceMappingURL=style.css.map */
