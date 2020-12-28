@@ -2774,4 +2774,137 @@ html {
   color: red;
   background-color: #ffcbcb;
 }
+
+.day28 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  position: relative;
+  background-color: #4183C4;
+  color: var(--fg-100);
+  height: 100vh;
+}
+
+.day28 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day28 main .user-form {
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day28 main .user-form input {
+  width: 100%;
+  display: block;
+  background-color: rebeccapurple;
+  border: none;
+  font-family: inherit;
+  font-size: 1.125rem;
+  color: var(--fg-100);
+  padding: 1rem 1.75rem;
+  border-radius: 0.625rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(154, 160, 185, 0.05) 0 1rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+.day28 main .user-form input::placeholder {
+  color: #e2e0e0;
+}
+
+.day28 main .user-form input:focus {
+  outline: none;
+}
+
+@media (max-width: 44rem) {
+  .day28 main .user-form input {
+    padding: 0.5rem 1rem;
+    margin: 1rem 2vw;
+    width: 96vw;
+  }
+}
+
+.day28 main .user-card {
+  max-width: 50rem;
+  display: flex;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background: rebeccapurple;
+  box-shadow: 0 0.25rem 0.625rem rgba(154, 160, 185, 0.05), 0 1rem 2.5rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 44rem) {
+  .day28 main .user-card {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 0 2vw;
+  }
+}
+
+.day28 main .user-card .avatar {
+  flex: 1;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 100rem;
+  border: 0.5rem solid #4183C4;
+}
+
+.day28 main .user-info {
+  max-width: 75%;
+}
+
+.day28 main .user-info p {
+  margin-top: 1rem;
+}
+
+.day28 main .user-info ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.day28 main .user-info ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day28 main .user-info ul li strong {
+  font-size: 0.8rem;
+}
+
+.day28 main .user-info #repos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.day28 main .user-info #repos a {
+  display: inline-block;
+  background-color: #4183C4;
+  padding: 0.1rem 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.625rem rgba(154, 160, 185, 0.05) 0 1rem 2.5rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.day28 main .user-info #repos a:hover, .day28 main .user-info #repos a:focus {
+  opacity: 0.8;
+}
+
+.day28 main .user-info #repos a:focus {
+  outline: none;
+}
+
+.day28 main .user-info #repos a:active {
+  transform: scale(0.97);
+}
 /*# sourceMappingURL=style.css.map */
