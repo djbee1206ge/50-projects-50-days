@@ -1,0 +1,55 @@
+.day29 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  position: relative;
+  background-color: white;
+  color:var(--fg-900);
+  height: 100vh;
+  overflow: hidden;
+
+  main {
+    font-family: 'Oswald', sans-serif;
+    display: flex;flex-direction: column;
+    justify-content: center;align-items: center;
+    
+    h3 {
+      text-align: center;
+      
+      .fa-heart{
+        color: red;
+      }
+    }
+    
+    small {
+      display: block;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    
+    #loveMe {
+      position: relative;
+      height: 27.5em;
+      width: 18.75em;
+      max-width: 100%;
+      background-image: url(https://cdn2.adrianflux.co.uk/wp-fluxposure/uploads/2017/05/vintage-British-classic-car-1.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      box-shadow: 0 1rem 2rem rgba(0,0,0,0.25), 0 0.6rem 0.6rem rgba(0,0,0,0.22);
+      
+      .fa-heart {
+        position: absolute;
+        animation: grow 600ms linear;
+        transform: translate(-50%, -50%) scale(0);
+      }
+      @keyframes grow {
+        to {
+          transform: translate(-50%, -50%) scale(10);
+          opacity: 0;
+        }
+      }
+    }
+  }
+    
+}
