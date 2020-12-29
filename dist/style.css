@@ -2965,4 +2965,33 @@ html {
     opacity: 0;
   }
 }
+
+.day30 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  position: relative;
+  background-color: white;
+  color: var(--fg-900);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.day30 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day30 main div {
+  position: absolute;
+  bottom: 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 /*# sourceMappingURL=style.css.map */

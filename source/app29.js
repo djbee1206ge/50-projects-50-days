@@ -49,6 +49,6 @@ const createHeart = (e) => {
 
   // hearts will now acccuoulate, so we need to remove them
 
-  setTimeout(() => loveMe.remove(), 1000)  // one item no {} needed
+  setTimeout(() => heart.remove(), 1000)  // one item no {} needed
 
 }
