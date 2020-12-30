@@ -13,10 +13,10 @@ body {
 		flex: 2;
 	}
 	&.xmas {
-		background-image: url(../assets/img/xmas.jpg);
+		background-image: url(../assets/img/happy-new-year-2021.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center bottom;
+		background-position: center center;
 		&::after{
 			position: absolute;
 			top: 0;
@@ -30,6 +30,12 @@ body {
 				 rgba(0,0,0,0) 100%,);
 		
 			}
+		header, footer {
+			background: transparent;
+			color:var(--clr-accent-100);
+			text-align: center;
+			transform: translateX(-3rem);
+		}
 	}
 
 	a {

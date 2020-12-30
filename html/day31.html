@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Muli&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <script src="../source/app31.js " defer></script>
+  <title>Day31</title>
+</head>
+
+<body class="day31">
+  <header class="header spacer">
+    <h1>Password Generator</h1>
+    <h3>Day 31 ¦ <a href="../index.html">Back</a></h3>
+  </header>
+  <main>
+    <article class="container">
+      <h2>password-generator</h2>
+      <div class="result-container">
+        <span class="result" id="result"></span>
+        <buton class="btn btn-clipboard" id="clipboard"><i class="far fa-clipboard"></i></buton>
+      </div>
+      <div class="settings">
+        <div class="setting">
+          <label>Password length</label>
+          <input type="number" id="length" min="4" max="20" value="20">
+        </div>
+        <div class="setting">
+          <label>Include uppercase letters</label>
+          <input type="checkbox" id="uppercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include lowercase letters</label>
+          <input type="checkbox" id="lowercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include numbers</label>
+          <input type="checkbox" id="number" checked>
+        </div>
+        <div class="setting">
+          <label>Include symbols</label>
+          <input type="checkbox" id="symbol" checked>
+        </div>
+
+      </div>
+      <button class="btn btn-large" id="generate">Generate password</button>
+    </article>
+  </main>
+  <footer class="footer">
+    <small>David Beecheno 2020</small>
+  </footer>
+</body>
+
+</html>
