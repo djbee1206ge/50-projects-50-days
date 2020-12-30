@@ -2977,11 +2977,6 @@ html {
 }
 
 .day30 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -2989,9 +2984,30 @@ html {
   align-items: center;
 }
 
+.day30 main h2 {
+  max-width: 50vw;
+}
+
 .day30 main div {
   position: absolute;
-  bottom: 2em;
-  background-color: rgba(0, 0, 0, 0.2);
+  bottom: 4em;
+  padding: 1rem;
+  background-color: var(--clr-accent-100);
+  color: var(--fg-100);
+  border-radius: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.11), 0 0 0.75rem rgba(0, 0, 0, 0.18);
+}
+
+.day30 main div input {
+  border: none;
+  width: 3.5rem;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+
+.day30 main div input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
