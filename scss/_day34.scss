@@ -1,0 +1,128 @@
+.day34 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-400);
+  header, footer {
+    width: 100%;
+  }
+  main {  
+    .counter, .final {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+    }
+    .counter{
+      transform: translate(-50%, -50%);
+      h4 {
+        font-size: 1.5rem;
+        margin: 0.3rem;
+        text-transform: uppercase;
+      }
+      &.hide {
+        transform: translate(-50%, -50%) scale(0);
+        animation: hide 500ms ease-out;
+      }
+    }
+    .final {
+      transform: translate(-50%, -50%) scale(0);
+      &.show {
+        transform: translate(-50%, -50%) scale(1);
+        animation: show 500ms ease-out;
+      }
+      button {
+        margin-top: 1rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background-image: radial-gradient(circle,
+        hsl(200, 100%, 80%) 0%,
+        hsl(200, 100%, 80%) 60%,
+        hsl(180, 100%, 42%) 60%,
+        hsl(180, 100%, 42%) 10%
+        );
+        &:active {
+          transform: scale(0.97);
+        }
+        &:hover {
+          opacity: 0.6;
+        }
+        
+      }
+    }
+    .nums {
+      color: var(--clr-accent-100);
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
+      height: 3rem;
+      width: 15.625rem;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(120deg);
+        transform-origin: bottom center;
+        &.in {
+          transform: translate(-50%, -50%) rotate(0deg);
+          animation: goIn 500ms ease-in-out;
+        }
+        &.out {
+          animation: goOut 500ms ease-in-out;
+        }
+      }
+      
+    }
+  }
+}  
+
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes goIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  33% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+  67% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes goOut {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  67% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
