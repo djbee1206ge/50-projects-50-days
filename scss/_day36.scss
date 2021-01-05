@@ -1,0 +1,39 @@
+.day36 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  header, footer {
+    width: 100%;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-900);
+    width: 100%;
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 25rem;
+      .square {
+        background-color: #1d1d1d;
+        height: 1rem;
+        width: 1rem;    
+        margin: 0.1rem;
+        transition: 3000ms ease;    
+        &:hover {
+          transition-duration: 0ms;
+        }
+      }
+  
+    }
+  }
+}
