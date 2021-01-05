@@ -3443,4 +3443,68 @@ html {
     transform: translate(-50%, -50%) rotate(-120deg);
   }
 }
+
+.day35 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.day35 header, .day35 footer {
+  width: 100%;
+}
+
+.day35 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day35 main .carousel {
+  height: 532px;
+  width: 500px;
+  box-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.day35 main .carousel .image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.day35 main .carousel .image-container img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.day35 main .carousel .buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day35 main .carousel .buttons-container button {
+  background-color: var(--clr-accent-100);
+  color: var(--fg-100);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  width: 49.75%;
+}
+
+.day35 main .carousel .buttons-container button:hover, .day35 main .carousel .buttons-container button:focus {
+  opacity: 0.75;
+}
+
+.day35 main .carousel .buttons-container button:active {
+  transform: scaleX(1.03);
+}
 /*# sourceMappingURL=style.css.map */
