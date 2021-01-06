@@ -1,7 +1,23 @@
 .day2 {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
+	
+	header, footer {
+    width: 100%;
+	}
+	
+	main {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		
 	.button-wrapper {
 		width: 100%;
 		display: flex;
@@ -75,5 +91,6 @@
 				border-color: var(--clr-accent-100);
 			}
 		}
+	}
 	}
 }

@@ -22,7 +22,7 @@
       margin-right: auto;
     }
 
-  }
+  
   
 
   .h1-small {
@@ -83,11 +83,17 @@
     display: flex;
     justify-content: space-between;
     align-self: start;
+    a:visited {
+      color: white;
+    }
     &.sticky {
       background-color: #fff;
       background-image: linear-gradient(rgba(0,0,0,0) 0%,rgba(0,0,0,0) 80%, rgba(0,0,0,0.05) 100%,);
       color: #000;
       padding: 1rem ;
+      a:visited {
+        color: black;
+      }
     }
       ul {
         list-style: none;
@@ -115,5 +121,6 @@
         }
       }
   }
+}
 
 }

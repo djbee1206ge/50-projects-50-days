@@ -1,5 +1,18 @@
-
+.day01 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	font-family: 'Lato', sans-serif;
+	height: 100vh;
+ 
+  header, footer {
+    width: 100%;
+  }
+  	
 	.panel-wrapper {
+		flex: 2;
 		display: flex;
 		background-color: #fff;
 		gap: 1rem;
@@ -58,3 +71,5 @@
 	.bg-img6 {
 		background-image: url(../assets/img/pieter-benjamin-nijs-xkcD-7u6NAc-unsplash.jpg);
 	}
+
+}

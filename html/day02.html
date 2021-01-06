@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Day 2</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="../dist/style.css" />
-		<script src="../source/app02.js" defer></script>
-	</head>
-	<body>
-		<div class="site-wrapper">
-			<header class="header spacer">
-				<h1>Progress Steps</h1>
-				<h3>Day 02 ¦ <a href="../index.html">Back</a></h3>
-			</header>
-			<main class="main day2">
-				<section class="border">
-					<div class="progress-wrapper">
-						<div class="progress" id="progress"></div>
-						<div class="circle active">1</div>
-						<div class="circle">2</div>
-						<div class="circle">3</div>
-						<div class="circle">4</div>
-					</div>
-					<div class="button-wrapper">
-						<button class="btn" id="prev" disabled>Prev</button>
-						<button class="btn" id="next">Next</button>
-					</div>
-				</section>
-			</main>
-			<footer class="footer">
-				<small>
-					This is just to show how pressing the <code>next</code> button shows you've moved to the
-					next step. Or return with the <code>prev</code> button. This could be part of a online
-					shop checkout system. Or booking a room, etc.
-				</small>
-				<hr />
-				<small>David Beecheno — &copy; 2020</small>
-			</footer>
-		</div>
-	</body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+		crossorigin="anonymous" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../dist/style.css" />
+	<script src="../source/app02.js" defer></script>
+	<title>Day 2</title>
+</head>
+
+<body class="day2">
+	<header class="header spacer">
+		<h1>Progress Steps</h1>
+		<h3>Day 02 ¦ <a href="../index.html">Back</a></h3>
+	</header>
+	<main>
+		<section class="border">
+			<div class="progress-wrapper">
+				<div class="progress" id="progress"></div>
+				<div class="circle active">1</div>
+				<div class="circle">2</div>
+				<div class="circle">3</div>
+				<div class="circle">4</div>
+			</div>
+			<div class="button-wrapper">
+				<button class="btn" id="prev" disabled>Prev</button>
+				<button class="btn" id="next">Next</button>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<small>
+			This is just to show how pressing the <code>next</code> button shows you've moved to the
+			next step. Or return with the <code>prev</code> button. This could be part of a online
+			shop checkout system. Or booking a room, etc.
+		</small>
+		<hr />
+		<small>David Beecheno — &copy; 2020</small>
+	</footer>
+</body>
+
 </html>

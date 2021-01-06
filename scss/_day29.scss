@@ -4,17 +4,26 @@
   position: relative;
   background-color: white;
   color:var(--fg-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: 
+  center;align-items: center;
   height: 100vh;
   overflow: hidden;
-
+  header, footer {
+    width: 100%;
+  }
+  
   main {
+    flex: 2;
     font-family: 'Oswald', sans-serif;
-    display: flex;flex-direction: column;
-    justify-content: center;align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: 
+    center;align-items: center;
     
     h3 {
-      text-align: center;
-      
+      text-align: center;      
       .fa-heart{
         color: red;
       }
@@ -37,7 +46,6 @@
       background-repeat: no-repeat;
       cursor: pointer;
       box-shadow: 0 1rem 2rem rgba(0,0,0,0.25), 0 0.6rem 0.6rem rgba(0,0,0,0.22);
-      
       .fa-heart {
         position: absolute;
         animation: grow 600ms linear;
@@ -50,6 +58,6 @@
         }
       }
     }
-  }
     
+  }
 }

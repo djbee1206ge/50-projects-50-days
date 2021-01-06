@@ -2,21 +2,14 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   position: relative;
+  height: 100vh;
   background-color: var(--clr-accent-300);
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  header, footer {
+  width: 100%
   }
   main{
+    flex: 2;
+    min-height: calc(100% - 7.5625rem);
     position: relative;
     display: flex;
     flex-direction: column;

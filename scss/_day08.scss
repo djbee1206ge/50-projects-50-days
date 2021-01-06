@@ -1,3 +1,17 @@
+.day08 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	header, footer {
+    width: 100%;
+	}
+	
+	main {
+		flex: 2;
+
 .form-container {
 	display: flex;
 	flex-direction: column;
@@ -22,7 +36,7 @@
 		padding: 2rem;
 		max-width: 21rem;
 		margin: 0 auto;
-		background-color: var(--clr-accent-100);
+		background-color: var(--clr-accent-300);
 
 		> * + * {
 			margin-top: 1rem;
@@ -47,7 +61,8 @@
 		text-transform: uppercase;
 		color: var(--clr-neutral-500);
 		font-weight: 700;
-		background-color: var(--clr-primary-200);
+		letter-spacing: 0.2rem;
+		background-color: var(--clr-accent-200);
 		border: 0;
 		width: 100%;
 		padding: 0.5rem;
@@ -93,5 +108,7 @@
 				transition: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 			}
 		}
+	}
+}
 	}
 }

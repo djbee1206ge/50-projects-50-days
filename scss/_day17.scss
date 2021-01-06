@@ -1,103 +1,111 @@
 .day17 {
-  width: 100%;
-  background-color: var(--primary-clr);  
-  border-radius: 1rem;
-  header {
-    padding: 1rem;
-    display: flex;
-    background-color: var(--secondary-clr);
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    h4 {
-      color: var(--fg-100);
-      a:hover{
-        color:var(--placeholder-clr);
-        
-      }
-      
-    }
-
-  .search {
-    background-color: transparent;
-    color: var(--fg-100);
-    padding: 0.2rem 1rem;
-    border: 0.1rem solid var(--primary-clr);
-    border-radius: 2rem;
-    &::placeholder {
-      color: var(--placeholder-clr);
-    }
-    &:focus{
-      // border: 0.1rem solid var(--primary-clr);
-      background-color: var(--primary-clr);
-      outline: none;
-    }
-  }
-
-  }
-  #main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    .movie {
-      width: 18.75rem;
-      background-color: var(--secondary-clr);
-      box-shadow: rgba(0,0,0,0.2);
-      position: relative;
-      overflow: hidden;
-      border-radius: 0.25rem;
-      &:hover .overview{
-        transform: translateY(0);
-      }
-      img {
-        width: 100%;
-      }
-      &-info{
-        color: var(--fg-100);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+    
+    .movie-container {
+      flex: 2;
+      width: 100%;
+      background-color: var(--primary-clr);  
+      font-family: 'Roboto', sans-serif;
+      header {
+        padding: 1rem;
         display: flex;
+        background-color: var(--secondary-clr);
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 1rem 1rem;
-        letter-spacing: 0.1rem;
-        span {
-          background-color: var(--primary-clr);
-          padding: 0.01rem 0.75rem;
-          border-radius: 1rem;
-          font-weight: 700;
-          &.green{
-            color: hsl(130, 69%, 45%);
+        h4 {
+          color: var(--fg-100);
+          a {
+            color: var(--placeholder-clr);
+            &:hover{
+              color: var(--clr-accent-300);            
+            }
           }
-          &.red{
-            color: hsl(0, 80%, 43%);
-          }
-          &.orange{
-            color:hsl(39, 100%, 50%)
-          }
+            
         }
+
+      .search {
+        background-color: transparent;
+        color: var(--fg-100);
+        padding: 0.2rem 1rem;
+        border: 0.1rem solid var(--primary-clr);
+        border-radius: 2rem;
+        &::placeholder {
+          color: var(--placeholder-clr);
+        }
+        &:focus{
+          // border: 0.1rem solid var(--primary-clr);
+          background-color: var(--primary-clr);
+          outline: none;
+        }
+      }
 
       }
-      .overview {
-        position: absolute;
-        background-color: var(--bg-100);
-        padding: 2rem;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        color: var(--primary-clr);
-        max-height: 100%;
-        transform: translateY(101%);
-        transition: 300ms ease;
-        h3 {
-          margin-bottom: 1rem;
-          letter-spacing: 0.1rem;
-        }
-        p {
-          margin-top: 1rem;
-        }
+      #main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+        .movie {
+          width: 18.75rem;
+          background-color: var(--secondary-clr);
+          box-shadow: rgba(0,0,0,0.2);
+          position: relative;
+          overflow: hidden;
+          border-radius: 0.25rem;
+          &:hover .overview{
+            transform: translateY(0);
+          }
+          img {
+            width: 100%;
+          }
+          &-info{
+            color: var(--fg-100);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem 1rem;
+            letter-spacing: 0.1rem;
+            span {
+              background-color: var(--primary-clr);
+              padding: 0.01rem 0.75rem;
+              border-radius: 1rem;
+              font-weight: 700;
+              &.green{
+                color: hsl(130, 69%, 45%);
+              }
+              &.red{
+                color: hsl(0, 80%, 43%);
+              }
+              &.orange{
+                color:hsl(39, 100%, 50%)
+              }
+            }
 
+          }
+          .overview {
+            position: absolute;
+            background-color: var(--bg-100);
+            padding: 2rem;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: var(--primary-clr);
+            max-height: 100%;
+            transform: translateY(101%);
+            transition: 300ms ease;
+            h3 {
+              margin-bottom: 1rem;
+              letter-spacing: 0.1rem;
+            }
+            p {
+              margin-top: 1rem;
+            }
+
+          }
+        }
       }
     }
   }
-}

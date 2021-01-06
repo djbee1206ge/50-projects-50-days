@@ -2,7 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	section{
+	font-family: 'Muli', sans-serif;
+	main{
 		flex: 2;
 	}
 }
@@ -44,6 +45,7 @@
 		border-radius: 0.25rem;
 		padding: 0.2rem 1rem;
 		text-transform: uppercase;
+		letter-spacing: 0.1rem;
 		font-weight: var(--fw-700);
 
 		&:hover {
