@@ -3945,4 +3945,51 @@ html {
   font-size: 0.9rem;
   margin-top: 0.1rem;
 }
+
+.day39 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+}
+
+.day39 header, .day39 footer {
+  width: 100%;
+}
+
+.day39 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day39 main .tailwind-container {
+  width: 95vw;
+}
+
+@media (min-width: 50rem) {
+  .day39 main .tailwind-container {
+    width: 60vw;
+  }
+}
+
+.day39 main .background {
+  position: absolute;
+  background: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b") no-repeat center center/cover;
+  top: -1.5rem;
+  left: -1.5rem;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  z-index: -1;
+  filter: blur(25px);
+}
 /*# sourceMappingURL=style.css.map */

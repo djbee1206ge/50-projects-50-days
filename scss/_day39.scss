@@ -1,0 +1,40 @@
+.day39 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .tailwind-container {
+      width: 95vw;
+      @media(min-width: 50rem) {
+        width: 60vw;
+      }
+    }
+    .background  {
+      position: absolute;
+      background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b')
+      no-repeat center center/cover;
+      top: -1.5rem;
+      left: -1.5rem;
+      right: -1.5rem;
+      bottom: -1.5rem;
+      z-index: -1;
+      filter: blur(25px)
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.min.js" defer></script>
+  <script src="../source/app39.js " defer></script>
+  <title>Day39</title>
+</head>
+
+<body class="day39">
+  <header class="header spacer">
+    <h1>Password Strength Background</h1>
+    <h3>Day 39 ¦ <a href="../index.html">Back</a></h3>
+    <small>this is using Tailwind</small>
+  </header>
+  <main>
+    <div class="background" id="background"></div>
+    <div class="tailwind-container bg-white rounded p-10 text-center shadow-md">
+      <p class="text-sm text gray-700">
+        Just change the password to see the effect!
+      </p>
+      <div class="my-4 text-left">
+        <label for="email" class="text-gray-900" required>Email</label>
+        <input type="text" class="border block w-full p-2 mt-2 rounded" id="email" placeholder="Enter email!">
+      </div>
+      <div class="my-4 text-left">
+        <label for="password" class="text-gray-900">Password</label>
+        <input type="password" class="border block w-full p-2 mt-2 rounded" id="password" placeholder="Enter password!">
+      </div>
+      <button tape="submit" class="bg-black text-white py-2 mt-4 inline-block w-full rounded">Submit</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>David Beecheno 2021</small>
+  </footer>
+</body>
+
+</html>
