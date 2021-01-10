@@ -12,60 +12,44 @@
 	main {
 		flex: 2;
 	}
-	&.xmas {
-		background-image: url(../assets/img/happy-new-year-2021.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center center;
-		&::after{
-			position: absolute;
-			top: 0;
-			height: 100%;
-			width: 100%;
-			content: '';
-			background-image: linear-gradient(
-				rgba(0,0,0,0) 0%,
-				 rgba(0,0,0,0.75) 40%, 
-				 rgba(0,0,0,0.75) 60%, 
-				 rgba(0,0,0,0) 100%,);
-		
-			}
-		header, footer {
-			background: transparent;
-			color:var(--clr-accent-100);
-			text-align: center;
-			transform: translateX(-3rem);
-		}
+	header, footer {
+		color: var(--fg-100);
+		background:var(--clr-accent-100);
+		text-align: center;
+		width: 100%;
 	}
-
 	a {
 		text-decoration: none;
 		color: inherit;
 	}
-	.site-wrapper {	
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		min-height: 100vh;	
-		}
-
 	.toc {
 		position: relative;
 		margin: 0;
-		flex: 3;
-		color: #fff;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		background-color: var(--bg-300);
+	
 
 		.project {
+			background-color: var(--bg-100);
+			font-size: 0.8rem;
+			width: 95vw;
 			max-width: 80rem;
-			margin: 0 auto;
-				@media (min-width: 40rem) {
-			columns: 2;
-			column-gap: 1rem;
+			margin: 2vw auto;
+			padding: 2rem;
+			border-radius: 1rem;
+			line-height: 2.25em;
+			a:hover, a:focus {
+				color: var(--clr-accent-100);
+			}
+			box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3), 0 0 0.3rem rgba(0, 0, 0, 0.1);
+			@media (min-width: 40rem) {
+				font-size: 1rem;	
+				columns: 2;
+				column-gap: 1rem;
 			}
 			@media (min-width: 60rem) {
 				columns: 3;
