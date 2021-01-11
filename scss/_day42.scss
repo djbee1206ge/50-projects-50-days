@@ -1,0 +1,78 @@
+.day42 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+    .container {
+      border-radius: 0.3rem;
+      box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.2);
+      overflow: hidden;
+      width: 18.75rem;
+      margin: 3rem 0;
+      .subtitle {
+        display: inline-block;
+        opacity: 0.75;
+        margin: 0.25rem 0 1.25rem;
+      }
+      .header {
+        background-color: var(--clr-accent-300);
+        color: var(--fg-100);
+        padding: 2rem 1.25rem;
+        input{
+          width: 100%;
+          border-radius: 2rem;
+          font-size: 0.875rem;
+          padding: 0.625rem 1rem;
+          background-color: rgba(0,0,0,0.3);
+          color: var(--fg-100);
+          border: 0;   
+          &:focus {
+            outline: 0;
+            background-color: rgba(0,0,0,0.5);
+          }
+        }
+      }
+      .user-list {
+        max-height: 25rem;
+        overflow-y: auto;
+    
+        li {
+          display: flex;
+          padding: 1.25rem;
+          &:not(:last-of-type){
+            border-bottom: 0.0625rem solid #ddd
+          }
+          &.hide {
+            display: none;
+          }
+        }
+      }
+      img {
+          border-radius: 50%;
+          object-fit: cover;
+          height: 3rem;
+          width: 3rem;
+          margin-right: 1.25rem;          
+      }
+      .user-info p{
+                    font-size: 0.75rem;
+      }  
+    }
+  }
+}
