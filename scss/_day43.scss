@@ -1,0 +1,100 @@
+.day43 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .panel-container{
+      background-color: var(--bg-100);
+      box-shadow: 0 0 0.625rem rgba(0,0,0,0.3);
+      border-radius: 0.25rem;
+      font-size: 90%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      max-width: 25rem;
+      @media(max-width: 40rem) {
+        width: 90vw
+      }
+      *+* {
+        margin-top: 1rem;
+      }
+      strong {
+        line-height: 1.25rem;
+      }
+      .ratings-container {
+        display: flex;
+        margin: 1.25rem 0;
+        .rating {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          cursor: pointer;
+          padding: 1.25rem;
+          margin: 0.625rem 0.3rem;
+          img {
+            height: 2.5rem;
+            width: 2.5rem;
+          }
+          small {
+            color: #555;
+            display: inline-block;
+            margin: 0.625rem 0 0;
+            &:hover, &:active {
+             color: #111; 
+            }
+          }
+          &:hover, &.active {
+            border-radius: 0.25rem;
+            box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+          }
+        }
+        
+      }
+      .btn {
+        background-color: #333;
+        color: #fff;
+        border: 0;
+        border-radius: 0.25rem; 
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        box-shadow: 0.1rem 0.1rem 0.625rem rgba(0,0,0,0.3);
+        transition: 250ms ease;
+        &:focus {
+          outline: 0;
+        }
+        &:hover, &:focus {
+          background-color: rgb(1, 14, 42);
+        }
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+      .fa-heart {
+        color: red;
+        font-size: 2rem;
+        mask-clip: 1rem;
+      }
+    }
+  }
+}

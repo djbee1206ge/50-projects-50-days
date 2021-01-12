@@ -4257,4 +4257,123 @@ html {
 .day42 main .container .user-info p {
   font-size: 0.75rem;
 }
+
+.day43 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+}
+
+.day43 header, .day43 footer {
+  width: 100%;
+}
+
+.day43 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day43 main .panel-container {
+  background-color: var(--bg-100);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  font-size: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  max-width: 25rem;
+}
+
+@media (max-width: 40rem) {
+  .day43 main .panel-container {
+    width: 90vw;
+  }
+}
+
+.day43 main .panel-container * + * {
+  margin-top: 1rem;
+}
+
+.day43 main .panel-container strong {
+  line-height: 1.25rem;
+}
+
+.day43 main .panel-container .ratings-container {
+  display: flex;
+  margin: 1.25rem 0;
+}
+
+.day43 main .panel-container .ratings-container .rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  padding: 1.25rem;
+  margin: 0.625rem 0.3rem;
+}
+
+.day43 main .panel-container .ratings-container .rating img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.day43 main .panel-container .ratings-container .rating small {
+  color: #555;
+  display: inline-block;
+  margin: 0.625rem 0 0;
+}
+
+.day43 main .panel-container .ratings-container .rating small:hover, .day43 main .panel-container .ratings-container .rating small:active {
+  color: #111;
+}
+
+.day43 main .panel-container .ratings-container .rating:hover, .day43 main .panel-container .ratings-container .rating.active {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+.day43 main .panel-container .btn {
+  background-color: #333;
+  color: #fff;
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  box-shadow: 0.1rem 0.1rem 0.625rem rgba(0, 0, 0, 0.3);
+  transition: 250ms ease;
+}
+
+.day43 main .panel-container .btn:focus {
+  outline: 0;
+}
+
+.day43 main .panel-container .btn:hover, .day43 main .panel-container .btn:focus {
+  background-color: #010e2a;
+}
+
+.day43 main .panel-container .btn:active {
+  transform: scale(0.98);
+}
+
+.day43 main .panel-container .fa-heart {
+  color: red;
+  font-size: 2rem;
+  mask-clip: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
