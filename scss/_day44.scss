@@ -1,0 +1,106 @@
+.day44 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(135deg, rgb(225, 242, 245) 0%, rgb(199, 247, 253) 100%);
+    overflow: hidden;
+    .range-container {
+      position: relative;
+      // customization of sllider
+      input[type='range'] {
+        width: 18.75rem;
+        margin: 1.125rem 0;
+        -webkit-appearance: none;
+        &:focus {
+          outline: none;
+        }
+        + label {
+          background-color: #fff;
+          position: absolute;
+          top: -25px;
+          left: 110px;
+          width: 80px;
+          text-align: center;
+          padding: 0.25rem 0;
+          border-radius: 0.25rem;
+          box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.3);
+        }
+        
+        &::-webkit-slider-runnable-track {
+          background: purple;
+          border-radius: 0.25rem;
+          width: 100%;
+          height: 0.625rem;
+          cursor:pointer;
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 1.5rem;
+          width: 1.5rem;
+          background: #fff;
+          border-radius: 50%;
+          border: 1px solid purple;
+          margin-top: -7px;  
+          cursor:pointer;        
+        }
+        /*  TO DO
+            Fix the white sèace around the Firefox slider */  
+        
+        &::-moz-range-track{
+          background: purple;
+          border-radius: 0.25rem;
+          width: 100%;
+          height: 0.625rem;
+          cursor:pointer;
+        }
+        &::-moz-range-thumb {
+          -webkit-appearance: none;
+          height: 1.5rem;
+          width: 1.5rem;
+          background: #fff;
+          border-radius: 50%;
+          border: 1px solid purple;
+          margin-top: -7px;  
+          cursor:pointer;        
+        }
+        &::-ms-track {
+          background: purple;
+          border-radius: 0.25rem;
+          width: 100%;
+          height: 0.625rem;
+          cursor:pointer;
+        }
+        &::-ms-thumb {
+          -webkit-appearance: none;
+          height: 1.5rem;
+          width: 1.5rem;
+          background: #fff;
+          border-radius: 50%;
+          border: 1px solid purple;
+          margin-top: -7px;  
+          cursor:pointer;        
+        }
+
+        
+
+      }
+    }
+    
+  }
+}
