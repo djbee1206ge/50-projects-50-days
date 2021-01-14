@@ -4489,4 +4489,118 @@ html {
   margin-top: -7px;
   cursor: pointer;
 }
+
+.day45 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+}
+
+.day45 header, .day45 footer {
+  width: 100%;
+}
+
+.day45 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day45 main .logo {
+  width: 9.375rem;
+}
+
+.day45 main .text {
+  text-transform: uppercase;
+}
+
+.day45 main .nav-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.day45 main .open-btn {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+}
+
+.day45 .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: 400ms ease-in-out;
+}
+
+.day45 .nav.visible {
+  transform: translateX(0);
+}
+
+.day45 .nav-black {
+  background-color: #1e1e1e;
+  width: clamp(20rem, 60%, 30rem);
+  transition-delay: 300ms;
+}
+
+.day45 .nav-black.visible {
+  transition-delay: 0;
+}
+
+.day45 .nav-red {
+  background-color: #e60a14;
+  width: 95%;
+  transition-delay: 200ms;
+}
+
+.day45 .nav-red.visible {
+  transition-delay: 400ms;
+}
+
+.day45 .nav-white {
+  background-color: white;
+  width: 95%;
+  padding: 2.5rem;
+  position: relative;
+  transition-delay: 0;
+}
+
+.day45 .nav-white.visible {
+  transition-delay: 600ms;
+}
+
+.day45 .nav-white .close-btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  opacity: 0.3;
+}
+
+.day45 .nav-white .list * + * {
+  margin-top: 1.25rem;
+}
+
+.day45 .nav-white .list a {
+  color: #1e1e1e;
+  font-size: 0.875rem;
+}
+
+.day45 .nav-white .list ul {
+  list-style: none;
+  padding-left: 1.25rem;
+}
 /*# sourceMappingURL=style.css.map */
