@@ -4603,4 +4603,89 @@ html {
   list-style: none;
   padding-left: 1.25rem;
 }
+
+.day46 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-300);
+  background-image: linear-gradient(315deg, var(--bg-300) 0%, var(--bg-200) 100%);
+  min-height: 100vh;
+}
+
+.day46 header, .day46 footer {
+  width: 100%;
+}
+
+.day46 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day46 main .quiz-container {
+  background-color: var(--bg-100);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.625rem 0.1rem rgba(100, 100, 100, 0.1);
+  overflow: hidden;
+}
+
+.day46 main .quiz-container button {
+  background-color: #663399;
+  color: var(--fg-100);
+  border: 0;
+  padding: 0.2rem 0.75rem;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.125rem;
+}
+
+.day46 main .quiz-container button:hover, .day46 main .quiz-container button:focus {
+  background-color: #4f148a;
+}
+
+.day46 main .quiz-container button:focus {
+  outline: none;
+}
+
+.day46 main .quiz-header {
+  width: clamp(18.875rem, 95vw, 37.5rem);
+  padding: 2rem;
+}
+
+.day46 main .quiz-header .question {
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.day46 main .quiz-header ul {
+  list-style: none;
+  padding: 0;
+}
+
+.day46 main .quiz-header ul li {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+@media (min-width: 35rem) {
+  .day46 main .quiz-header ul li {
+    font-size: 1.25rem;
+    margin: 1rem;
+  }
+}
+
+.day46 main .quiz-header ul li label {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+.day46 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-300);
+  background-image: linear-gradient(315deg, var(--bg-300) 0%, var(--bg-200) 100%);
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .quiz{
+      &-container {
+      background-color: var(--bg-100);
+      border-radius: 1rem;
+      box-shadow: 0 0 0.625rem 0.1rem rgba(100,100,100,0.1);
+      overflow: hidden;
+      button {
+        background-color: #663399;
+        color: var(--fg-100);
+        border: 0;
+        padding: 0.2rem 0.75rem;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 1.125rem;
+          &:hover, &:focus {
+            background-color: #4f148a;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      &-header {
+        width: clamp(18.875rem, 95vw, 37.5rem);
+        padding: 2rem;
+      .question {
+        padding: 1rem;
+        text-align: center;
+        line-height: 1.2;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          font-size: 1rem;
+          margin: 0.5rem;
+          @media(min-width: 35rem) {
+            font-size: 1.25rem;
+            margin: 1rem;
+          }
+          label {
+            cursor: pointer;            
+          }
+        }
+        }
+      }
+    }
+  }
+}
