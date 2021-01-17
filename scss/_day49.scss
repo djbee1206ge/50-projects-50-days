@@ -1,0 +1,69 @@
+.day49 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    h2 {
+      font-size: 8rem;
+      color:var(--clr-accent-200);
+      opacity: 0.4;
+          
+    }
+    #form {
+      box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
+      width: 95vw;
+      max-width: 25rem; 
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background-color: var(--bg-100);
+      margin-top: 2rem;
+      
+      .input {
+        color: var(--clr-accent-200);
+        border: 0;
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+          &:focus {
+            outline: var(--clr-accent-200);
+          }
+        }
+      .todos {
+        margin: 0;
+        li{
+          border-top: 0.0625rem solid var(--fg-400);
+          padding: 0.5rem 1rem;
+          font-size: 1.5rem;
+          cursor: pointer;
+          &.completed {
+            text-decoration: line-through;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    small {
+      margin-top: 2rem;  
+      text-align: center;
+      color: var(--fg-400);
+    }
+  }
+}

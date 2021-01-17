@@ -4853,4 +4853,111 @@ html {
   width: 300px;
   object-fit: cover;
 }
+
+.day49 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-200);
+  min-height: 100vh;
+}
+
+.day49 header, .day49 footer {
+  width: 100%;
+}
+
+.day49 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day49 main h2 {
+  font-size: 8rem;
+  color: var(--clr-accent-200);
+  opacity: 0.4;
+}
+
+.day49 main #form {
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+  width: 95vw;
+  max-width: 25rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--bg-100);
+  margin-top: 2rem;
+}
+
+.day49 main #form .input {
+  color: var(--clr-accent-200);
+  border: 0;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.day49 main #form .input:focus {
+  outline: var(--clr-accent-200);
+}
+
+.day49 main #form .todos {
+  margin: 0;
+}
+
+.day49 main #form .todos li {
+  border-top: 0.0625rem solid var(--fg-400);
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.day49 main #form .todos li.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.day49 main small {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--fg-400);
+}
+
+.day50 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-300);
+  background-image: linear-gradient(135deg, var(--bg-500) 0%, var(--bg-600) 100%);
+  min-height: 100vh;
+}
+
+.day50 header, .day50 footer {
+  width: 100%;
+}
+
+.day50 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.css.map */
