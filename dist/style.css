@@ -12,7 +12,7 @@
   --bg-300-light:  hsla(180, 87%, 41%, 0.15);
   --bg-400: hsl(200, 100%, 80%);
   --bg-500: hsl(270, 50%, 85%);
-  --bg-500: hsl(41, 96%, 83%);
+  --bg-600: hsl(41, 96%, 83%);
   --bg-700: #cccccc;
   --bg-800: #3a3a3a;
   --bg-900: #111111;
@@ -4687,5 +4687,123 @@ html {
 
 .day46 main .quiz-header ul li label {
   cursor: pointer;
+}
+
+.day47 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-300);
+  background-image: linear-gradient(135deg, var(--bg-500) 0%, var(--bg-600) 100%);
+  min-height: 100vh;
+}
+
+.day47 header, .day47 footer {
+  width: 100%;
+}
+
+.day47 main {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.day47 main .testimonial-container {
+  position: relative;
+  width: 95vw;
+  max-width: 48rem;
+  background-color: var(--clr-accent-500);
+  color: var(--fg-100);
+  padding: 3rem 6rem;
+  border-radius: 0.625rem;
+}
+
+@media (max-width: 26rem) {
+  .day47 main .testimonial-container {
+    padding: 4rem 2rem;
+  }
+}
+
+.day47 main .testimonial-container .fa-quote {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.75rem;
+  position: absolute;
+  top: 5.5rem;
+}
+
+@media (max-width: 47rem) {
+  .day47 main .testimonial-container .fa-quote {
+    display: none;
+  }
+}
+
+.day47 main .testimonial-container .fa-quote-right {
+  left: 2.5rem;
+}
+
+.day47 main .testimonial-container .fa-quote-left {
+  right: 2.5rem;
+}
+
+@media (min-width: 47rem) {
+  .day47 main .testimonial-container .testimonial {
+    text-align: justify;
+  }
+}
+
+.day47 main .testimonial-container .user {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+  height: 5rem;
+}
+
+.day47 main .testimonial-container .user img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.day47 main .testimonial-container .user-details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.day47 main .testimonial-container .user-role {
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.day47 main .testimonial-container .progress-bar {
+  background-color: var(--bg-100);
+  height: 0.25rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  transform-origin: left;
+  animation: grow 10000ms linear infinite;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+    background-color: var(--clr-accent-500);
+  }
+  100% {
+    transform: scaleX(1);
+    background-color: var(--bg-100);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+.day47 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-300);
+  background-image: linear-gradient(135deg, var(--bg-500) 0%, var(--bg-600) 100%);
+  min-height: 100vh;
+  header, footer {
+    width: 100%;
+  }
+  main {
+    position: relative;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .testimonial-container {
+      position: relative;
+      width: 95vw;
+      max-width: 48rem;
+      background-color: var(--clr-accent-500);
+      color:var(--fg-100);
+      padding: 3rem 6rem;
+      border-radius: 0.625rem;
+      @media (max-width: 26rem){
+        padding: 4rem 2rem;
+      }
+      .fa-quote {
+        color: rgba(255,255,255,0.4);
+        font-size: 1.75rem;
+        position: absolute;
+        top: 5.5rem;
+        @media (max-width: 47rem){
+          display: none;
+        }
+        &-right {
+          left: 2.5rem;
+        }
+        &-left {
+          right: 2.5rem;
+        } 
+      }
+      .testimonial {
+        @media (min-width: 47rem){
+          text-align: justify;          
+        }
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        gap: 2rem;
+        height: 5rem;
+        img {
+          height: 5rem;
+          width: 5rem;
+          border-radius: 50%;          
+        }
+        &-details {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-evenly;          
+        }
+        &-role {
+          font-weight: 200;
+          color: rgba(255,255,255,0.6);
+        }
+      }
+      .progress-bar {
+        background-color: var(--bg-100);
+        height: 0.25rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        transform-origin: left;
+        animation: grow 10000ms linear infinite;
+        
+      }
+      @keyframes grow {
+        0% {
+          transform: scaleX(0);
+          background-color: var(--clr-accent-500);
+       }
+
+        100% {
+          transform: scaleX(1);
+          background-color: var(--bg-100);
+        }
+          
+        }
+        
+      }
+  }
+}
