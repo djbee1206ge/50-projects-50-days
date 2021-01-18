@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../dist/style.css">
   <script src="../source/app50.js " defer></script>
   <title>Day 50</title>
@@ -14,13 +14,59 @@
 
 <body class="day50">
   <header class="header spacer">
-    <h1>Insect Catch Game</h1>
+    <h1>Catch the Insect Game</h1>
     <h3>Day 50 ¦ <a href="../index.html">Back</a></h3>
+    <small>not for mobile</small>
   </header>
-  <main>
+  <div class="screen">
+    <h2>Catch the Insect</h2>
+    <button class="btn" id="start_btn">Play Game</button>
+  </div>
+
+  <div class="screen">
+    <h2>Choose your insect!</h2>
+    <ul class="insects-list">
+      <li>
+        <button class="choose-insect-btn">
+          <p>fly</p>
+          <img src="https://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>cockroach</p>
+          <img src="https://pngimg.com/uploads/roach/roach_PNG12154.png" alt="cockroach">
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>spider</p>
+          <img src="https://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider">
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>mosquito</p>
+          <img src="https://pngimg.com/uploads/mosquito/mosquito_PNG18159.png" alt="mosquito">
+        </button>
+      </li>
+      <li>
+        <button class="choose-insect-btn">
+          <p>wasp</p>
+          <img src="https://pngimg.com/uploads/wasp/wasp_PNG44.png" alt="wasp">
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="screen game-container">
+    <h3 class="time" id="time">Time: 00:00</h3>
+    <h3 class="score" id="score">Score: 0</h3>
+    <h5 class="message" id="message">Are you getting annoyed now?<br><br>You are?<br><br>You know you'll never win!
+    </h5>
+  </div>
 
 
-  </main>
 
   <footer class="footer">
     <small>David Beecheno 2021</small>
